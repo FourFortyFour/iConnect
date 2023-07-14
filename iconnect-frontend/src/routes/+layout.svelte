@@ -1,11 +1,10 @@
 <nav>
-    
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li>Our Product</li>
-        <li>Contact</li>
-        <li>About Us</li>
-    </ul>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>Our Product</li>
+    <li>Contact</li>
+    <li>About Us</li>
+  </ul>
 </nav>
 
 <slot />
