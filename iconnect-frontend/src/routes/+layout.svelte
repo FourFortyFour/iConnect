@@ -17,6 +17,7 @@
     }
     ul {
         display: flex;
+        justify-content: space-around;
     }
     li{
         list-style: none;
