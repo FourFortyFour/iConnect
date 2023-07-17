@@ -2,6 +2,12 @@
     <aside></aside>
     <main class="order-form">
         <h2>Place Your Order</h2>
+        <form method="post" action="?/pay">
+            <label>
+                Name:
+                <input name="name" autocomplete="off"/>
+            </label>
+        </form>
     </main>
     <aside></aside>
 </div>
@@ -13,7 +19,9 @@
     .order-form {
         flex: 3;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
         background-color: gainsboro;
     }
     aside {
