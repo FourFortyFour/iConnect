@@ -9,11 +9,16 @@
 		"autobuild": "vite build --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^2.0.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"svelte": "^4.0.5",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"dotenv": "^16.3.1",
+		"firebase": "^10.0.0",
+		"stripe": "^12.13.0"
+	}
 }

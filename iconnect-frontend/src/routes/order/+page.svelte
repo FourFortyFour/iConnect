@@ -1,4 +1,4 @@
-<script>
+<script src="https://js.stripe.com/v3/">
   import { enhance } from "$app/forms";
 </script>
 
