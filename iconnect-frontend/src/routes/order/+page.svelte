@@ -9,7 +9,7 @@
   async function handleSubmit(event) {
     event.preventDefault();
     const stripe = await stripePromise;
-    const response = await fetch("/your-server-route", { method: "POST" });
+    const response = await fetch("/", { method: "POST" });
     const { sessionId } = await response.json();
     stripe.redirectToCheckout({ sessionId });
   }
