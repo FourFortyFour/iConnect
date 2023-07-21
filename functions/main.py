@@ -5,8 +5,10 @@
 from firebase_functions import https_fn
 from firebase_admin import initialize_app
 from flask import Flask, jsonify, request, Response
+import stripe
 
 initialize_app()
+stripe.api_key = "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
 app = Flask(__name__)
 
 @app.get("/test")
@@ -26,13 +28,13 @@ def test_get():
 def payment_webhook():
 
     event_payload = request.get_json()
-
     try:
         #have to import stripe
         event = stripe.Event.construct_from(
-            jsonify(event_payload), stripe.api_key
+            event_payload, stripe.api_key
         )
     except ValueError as e:
+        print("Something went wrong")
         return Response(status=404, response="Invalid payload")
         # Invalid payload
 
