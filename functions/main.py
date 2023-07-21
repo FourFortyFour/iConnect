@@ -3,11 +3,13 @@
 # Deploy with `firebase deploy`
 
 from firebase_functions import https_fn
-from firebase_admin import initialize_app, db
+from firebase_admin import initialize_app, firestore, credentials
 from flask import Flask, jsonify, request, Response
 import stripe
 
-initialize_app()
+cred = credentials.Certificate("/Users/akhtar/Documents/Documents-Suhaib/firedemos/iConnect/functions/iconnect-86ebb-firebase-adminsdk-15haq-dd4e47caea.json")
+fire_app = initialize_app(cred)
+db = firestore.client()
 stripe.api_key = "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
 app = Flask(__name__)
 
@@ -41,7 +43,21 @@ def payment_webhook():
     if event.type == "payment_intent.succeeded":
         #make a new order doc in firestore, will have to extract data
         #email the user, will have to collect info here
-        print("Payment intent successful")
+        amount = event.data["object"]["amount"]
+        charges = event.data["object"]["charges"]["data"][0]
+        billing_details = charges["billing_details"]
+        name = billing_details["name"]
+        email = billing_details["email"]
+
+        doc = {
+            "name" : name,
+            "email" : email,
+            "price" : amount / 100
+        }
+
+        print(f"Payment intent successful for {name} of amount {amount / 100} with email {email}")
+        db.collection("orders").add(doc)
+        
         pass
     elif event.type == "payment_intent.attached":
         pass
