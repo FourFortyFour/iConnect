@@ -8,8 +8,12 @@
     <h2>Place Your Order</h2>
     <form action="?/pay" method="post" use:enhance>
       <label>
-        Name:
-        <input name="name" autocomplete="off" />
+        Email:
+        <input type="email" name="email" autocomplete="off" />
+      </label>
+      <label>
+        Quantity:
+        <input type="number" name="quantity">
       </label>
       <button>Pay</button>
     </form>

@@ -3,7 +3,7 @@
 # Deploy with `firebase deploy`
 
 from firebase_functions import https_fn
-from firebase_admin import initialize_app
+from firebase_admin import initialize_app, db
 from flask import Flask, jsonify, request, Response
 import stripe
 
