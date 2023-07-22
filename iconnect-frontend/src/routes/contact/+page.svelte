@@ -6,10 +6,10 @@
         <input type="text" name="name" value="Full Name" />
       </label>
       <label for="email">
-        <input type="email" name="email" value="Email"/>
+        <input type="email" name="email" value="Email" />
       </label>
       <label for="msg">
-        <input type="text" name="email" value="Message"/>
+        <textarea name="msg" id="" cols="30" rows="10" value="Message" />
       </label>
       <button>Send</button>
     </form>
@@ -18,65 +18,70 @@
 </main>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
 
-    @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
+  * {
+    margin: 0px;
+    font-family: "Cabin Condensed", sans-serif;
+  }
+  h1 {
+    margin: 2% 0%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
-    * {
-        margin: 0px;
-        font-family: 'Cabin Condensed', sans-serif;
-    }
-    h1 {
-        margin: 2% 0%;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+  section > * {
+    padding: 2%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
 
-    section > * {
-        padding: 2%;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-items: center;
-    }
+  p {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
 
-    p {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-    }
+  label {
+    width: 70%;
+    margin-bottom: 2%;
+  }
 
-    label {
-        width: 70%;
-        margin-bottom: 2%;
-    }
+  input {
+    font-size: 18px;
+    border-radius: 25px;
+    width: 100%;
+    border: 0.05px solid black;
+    padding: 2%;
+  }
 
-    input {
-        font-size: 18px;
-        border-radius: 25px;
-        width: 100%;
-        border: 0.05px solid black;
-        padding: 2%;
-
-    }
-
-    button {
-        background-color: black;
-        color: white;
-        border: none;
-        font-size: 16px;
-        padding: 2% 6%;
-        border-radius: 25px;
-    }
+  textarea {
+    font-size: 18px;
+    border-radius: 25px;
+    width: 100%;
+    border: 0.05px solid black;
+    padding: 2%;
+  }
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 2% 6%;
+    border-radius: 25px;
+  }
 </style>
