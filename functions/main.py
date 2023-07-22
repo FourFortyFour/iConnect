@@ -3,11 +3,9 @@ from firebase_admin import initialize_app, firestore, credentials
 from flask import Flask, jsonify, request, Response
 import stripe
 
-# "C:\\Users\\AsusOne\\iconnect-86ebb-firebase-adminsdk-15haq-aac73db15f.json"
-
 cred = credentials.Certificate("")
 
-fire_app = initialize_app(cred)
+fire_app = initialize_app()
 db = firestore.client()
 stripe.api_key = "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
 app = Flask(__name__)
