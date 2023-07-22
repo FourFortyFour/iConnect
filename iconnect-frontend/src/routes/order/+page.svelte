@@ -9,7 +9,7 @@
     <form action="?/pay" method="post" use:enhance>
       <label>
         Email:
-        <input type="email" name="email" autocomplete="off" />
+        <input type="email" name="email" />
       </label>
       <label>
         Quantity:
