@@ -10,7 +10,6 @@ export function load({ params }) {
 const stripe = Stripe('sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza')
 export const actions = {
     pay: async ({ request }) => {
-        
         const data = await request.formData();
         const email = data.get('email')
         const quantity = data.get('quantity')
@@ -22,13 +21,13 @@ export const actions = {
                         product_data: {
                             name: 'ic-card',
                         },
-                        unit_amount: 200,
+                        unit_amount: 20000,
                     },
                     quantity: quantity,
                 },
             ],
             mode: 'payment',
-            customer_email : email,
+            customer_email: email,
             success_url: 'http://localhost:5173/placed',
             cancel_url: 'http://localhost:5173/',
             shipping_address_collection: {
