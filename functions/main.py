@@ -60,7 +60,6 @@ def payment_webhook() -> Response:
     if endpoint_sk:
         sign_header = request.headers.get("stripe-signature")
         event = make_event(req_data, sign_header, endpoint_sk)
-
     if event and event.type == "payment_intent.succeeded":
         proc_payment(event.data)
         return Response(status=200, response="payment successful")

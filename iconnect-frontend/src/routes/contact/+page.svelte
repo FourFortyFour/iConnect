@@ -3,13 +3,13 @@
   <section>
     <form action="" method="post">
       <label for="name">
-        <input type="text" name="name" value="Full Name" />
+        <input type="text" name="name" placeholder="John doe" />
       </label>
       <label for="email">
-        <input type="email" name="email" value="Email" />
+        <input type="email" name="email" placeholder="email@mail.com" required/>
       </label>
       <label for="msg">
-        <textarea name="msg" id="" cols="30" rows="10" value="Message" />
+        <textarea name="msg" id="" cols="30" rows="10" placeholder="Message" required/>
       </label>
       <button>Send</button>
     </form>
