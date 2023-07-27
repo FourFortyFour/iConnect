@@ -1,6 +1,6 @@
 from firebase_functions import https_fn
 from firebase_admin import initialize_app, firestore, credentials
-from flask import Flask, jsonify, request, Response
+from flask import Flask, request, Response
 import stripe
 from dotenv import load_dotenv
 import os
@@ -14,7 +14,7 @@ db = firestore.client()
 stripe.api_key = os.environ.get("STRIPE_PUBLISHABLE_KEY")
 app = Flask("internal")
 endpoint_sk = os.environ.get("STRIPE_WEBHOOK_KEY")
-print(endpoint_sk)
+# print(endpoint_sk)
 
 
 def make_event(req_data: str, sign_header: str, endpoint_sk: str) -> stripe.Event:
@@ -46,25 +46,21 @@ def proc_payment(data: dict) -> None:
 @app.route("/payment_done", methods=["POST"])
 def payment_webhook() -> Response:
     req_data = request.get_data(as_text=True)
-    event = None
-
-    # try:
-    #     event = request.get_json()
-    #     # have to import stripe
-    #     # event = stripe.Event.construct_from(event_payload, stripe.api_key)
-    # except:
-    #     print("Something went wrong")
-    #     return Response(status=404, response="Invalid payload")
-    #     # Invalid payload
     event = request.get_json()
-    if endpoint_sk:
-        sign_header = request.headers.get("stripe-signature")
-        event = make_event(req_data, sign_header, endpoint_sk)
+    sign_header = request.headers.get("stripe-signature")
 
-    if event and event.type == "payment_intent.succeeded":
+    if endpoint_sk is None:
+        return Response(status=400, response="Invalid endpoint secret key")
+
+    event = make_event(req_data, sign_header, endpoint_sk)
+    if event is None:
+        return Response(
+            status=400, response="Event construction failed, invalid payload"
+        )
+    elif isinstance(event, stripe.Event) and event.type == "payment_intent.succeeded":
         proc_payment(event.data)
         return Response(status=200, response="payment successful")
-    return Response(status=404, response="Invalid payload")
+    return Response(status=200, response="Event processed")
 
 
 # Exposing the flask app
