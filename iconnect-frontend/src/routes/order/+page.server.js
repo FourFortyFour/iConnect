@@ -1,12 +1,18 @@
 import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
-
+import dotenv from "dotenv";
 export const prerender = false;
-export function load({ params }) {}
+
+// export function load({ params }) { }
+// This will need to be changed securely to the live secret key in production
+dotenv.config();
 
 const stripe = Stripe(
-  "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
+  process.env.STRIPE_SECRET_KEY
 );
+
+console.log(process.env.STRIPE_SECRET_KEY)
+
 export const actions = {
   pay: async ({ request }) => {
     const data = await request.formData();
@@ -21,7 +27,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 200,
+            unit_amount: 20000,
           },
           quantity: quantity,
         },
@@ -35,7 +41,7 @@ export const actions = {
         metadata: {
           user_email: email,
           product_quantity: quantity,
-          product_name : "ic-card",
+          product_name: "ic-card",
         },
       },
       success_url: "http://localhost:5173/placed",

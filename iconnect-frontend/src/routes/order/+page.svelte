@@ -13,7 +13,7 @@
       </label>
       <label>
         Quantity:
-        <input type="number" name="quantity">
+        <input type="number" name="quantity" />
       </label>
       <button>Pay</button>
     </form>
