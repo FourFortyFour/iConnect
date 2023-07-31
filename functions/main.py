@@ -81,7 +81,7 @@ def proc_payment(data: dict) -> None:
         },
     }
 
-    # test_email(client_email)
+    test_email(client_email)
     # db.collection("orders").add(doc)
 
 

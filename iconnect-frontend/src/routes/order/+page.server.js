@@ -1,14 +1,14 @@
 import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
-import dotenv from "dotenv";
+import { STRIPE_SECRET_KEY } from "$env/static/private";
+
 export const prerender = false;
 
 // export function load({ params }) { }
 // This will need to be changed securely to the live secret key in production
-dotenv.config();
 
 const stripe = Stripe(
-  process.env.STRIPE_SECRET_KEY
+  STRIPE_SECRET_KEY
 );
 
 console.log(process.env.STRIPE_SECRET_KEY)
