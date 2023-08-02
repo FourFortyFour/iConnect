@@ -11,9 +11,9 @@
       /></span
     >
   </section>
-  <section class="toc">
-    <a href="">Terms of Use</a>
-    <a href="">Privacy Policy</a>
+  <section class="terms_n_conditions">
+    <a href="*">Terms of Use</a>
+    <a href="*">Privacy Policy</a>
   </section>
 </footer>
 
@@ -34,6 +34,9 @@
     justify-content: space-between;
     padding: 1%;
     font-size: large;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 
   .logo-footer {
@@ -44,7 +47,7 @@
     color: white;
   }
 
-  .toc {
+  .terms_n_conditions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;

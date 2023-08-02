@@ -12,6 +12,7 @@
     }
   ],
   "hosting": {
+    "site": "iconnectae",
     "public": "public",
     "ignore": [
       "firebase.json",
