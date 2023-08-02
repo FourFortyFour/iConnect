@@ -6,30 +6,22 @@ import { STRIPE_SECRET_KEY } from "$env/static/private";
 
 
 export const prerender = false;
-<<<<<<< HEAD
 export async function load({ params }) {
 
-    const productRef = doc(db, "products", "ic-1");
-    const docSnap = await getDoc(productRef);
+  const productRef = doc(db, "products", "ic-1");
+  const docSnap = await getDoc(productRef);
 
-    if (docSnap.exists()) {
-        return {product: docSnap.data()}
-    } else {
-        console.log('Product data not found');
-    }
+  if (docSnap.exists()) {
+    return { product: docSnap.data() }
+  } else {
+    console.log('Product data not found');
+  }
 
 }
-=======
-
-// export function load({ params }) { }
-// This will need to be changed securely to the live secret key in production
->>>>>>> f8f11d73d0e3adf6db4898a860d03aa0da8fa975
 
 const stripe = Stripe(
   STRIPE_SECRET_KEY
 );
-
-console.log(process.env.STRIPE_SECRET_KEY)
 
 export const actions = {
   pay: async ({ request }) => {

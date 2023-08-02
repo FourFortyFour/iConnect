@@ -53,7 +53,7 @@
   }
 
   section > * {
-    padding: 2%;
+    padding: 4%;
   }
   form {
     display: flex;

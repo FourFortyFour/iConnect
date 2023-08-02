@@ -1,7 +1,6 @@
 {
 	"name": "iconnect-frontend",
 	"version": "0.1.4",
-	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
