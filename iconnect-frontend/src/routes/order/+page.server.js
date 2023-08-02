@@ -1,8 +1,22 @@
+import { db } from '../../lib/firebase.js';
+import { doc, getDoc } from "firebase/firestore";
 import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
 
+
 export const prerender = false;
-export function load({ params }) {}
+export async function load({ params }) {
+
+    const productRef = doc(db, "products", "ic-1");
+    const docSnap = await getDoc(productRef);
+
+    if (docSnap.exists()) {
+        return {product: docSnap.data()}
+    } else {
+        console.log('Product data not found');
+    }
+
+}
 
 const stripe = Stripe(
   "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
@@ -39,7 +53,7 @@ export const actions = {
         },
       },
       success_url: "http://localhost:5173/placed",
-      cancel_url: "http://localhost:5173/",
+      cancel_url: "http://localhost:5173/bad_checkout",
       shipping_address_collection: {
         allowed_countries: ["AE"],
       },
