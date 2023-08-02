@@ -3,13 +3,11 @@
     <span class="footer-start">2023 iConnect. All rights reserved</span>
   </section>
   <section>
-    <span
-      ><img
-        class="logo-footer"
-        src="/logos/logo-no-background.png"
-        alt="logo of iconnect"
-      /></span
-    >
+    <img
+      class="logo-footer"
+      src="/svgs/radiantlogo.svg"
+      alt="logo of iconnect"
+    />
   </section>
   <section class="terms_n_conditions">
     <a href="*">Terms of Use</a>
@@ -32,7 +30,7 @@
     background-color: black;
     display: flex;
     justify-content: space-between;
-    padding: 1%;
+    padding: 0.5em;
     font-size: large;
     position: absolute;
     bottom: 0;
@@ -40,7 +38,8 @@
   }
 
   .logo-footer {
-    max-width: 30px;
+    height: 40%;
+    width: 40%;
   }
 
   .footer-start {

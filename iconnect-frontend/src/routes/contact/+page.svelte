@@ -1,9 +1,13 @@
 <main>
-  <h1>CONTACT</h1>
+  <div class="contact-header">
+    <div class="hbar" />
+    <h1>CONTACT</h1>
+    <div class="hbar" />
+  </div>
   <section>
     <form action="" method="post">
       <label for="name">
-        <input type="text" name="name" placeholder="John doe" />
+        <input type="text" name="name" placeholder="Enter your name" />
       </label>
       <label for="email">
         <input
@@ -25,7 +29,11 @@
       </label>
       <button>Send</button>
     </form>
-    <p>Placeholder image</p>
+    <img
+      class="contact-mainimage"
+      src="/svgs/contactpage.svg"
+      alt="contact us"
+    />
   </section>
 </main>
 
@@ -37,7 +45,7 @@
     font-family: "Cabin Condensed", sans-serif;
   }
   h1 {
-    margin: 2% 0%;
+    margin: 0;
   }
   main {
     display: flex;
@@ -48,7 +56,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     width: 100%;
   }
 
@@ -62,8 +69,21 @@
     align-items: center;
   }
 
-  p {
-    flex: 1;
+  .contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hbar {
+    flex-grow: 1;
+    height: 5px;
+    background-color: rgb(225, 6, 6);
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+
+  .contact-mainimage {
+    flex: 0.4;
     display: flex;
     justify-content: center;
   }
