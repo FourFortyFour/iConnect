@@ -2,9 +2,11 @@ import { db } from '../../lib/firebase.js';
 import { doc, getDoc } from "firebase/firestore";
 import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
+import { STRIPE_SECRET_KEY } from "$env/static/private";
 
 
 export const prerender = false;
+<<<<<<< HEAD
 export async function load({ params }) {
 
     const productRef = doc(db, "products", "ic-1");
@@ -17,10 +19,18 @@ export async function load({ params }) {
     }
 
 }
+=======
+
+// export function load({ params }) { }
+// This will need to be changed securely to the live secret key in production
+>>>>>>> f8f11d73d0e3adf6db4898a860d03aa0da8fa975
 
 const stripe = Stripe(
-  "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
+  STRIPE_SECRET_KEY
 );
+
+console.log(process.env.STRIPE_SECRET_KEY)
+
 export const actions = {
   pay: async ({ request }) => {
     const data = await request.formData();
@@ -35,7 +45,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 200,
+            unit_amount: 20000,
           },
           quantity: quantity,
         },
@@ -49,7 +59,7 @@ export const actions = {
         metadata: {
           user_email: email,
           product_quantity: quantity,
-          product_name : "ic-card",
+          product_name: "ic-card",
         },
       },
       success_url: "http://localhost:5173/placed",
