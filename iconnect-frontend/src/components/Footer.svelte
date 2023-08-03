@@ -21,7 +21,6 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "Cabin Condensed", sans-serif;
-    /* position: relative; */
   }
   a {
     text-decoration: none;
@@ -36,7 +35,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
   }
 
   .logo-footer {
