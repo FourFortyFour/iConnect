@@ -38,12 +38,21 @@ def make_event(req_data: str, sign_header: str, webhook_sk: str) -> stripe.Event
         return None
 
 
-def proc_payment(data: dict) -> None:
+def proc_payment(data: dict):
     # make a new order doc in firestore, will have to extract data
     # email the user, will have to collect info here
     # print(f"Processing payment for {data}")
-    customer_details = data["object"]["shipping"]
-    metadata = data["object"]["metadata"]
+    doc = {}
+    try:
+        customer_details = data["object"]["shipping"]
+        metadata = data["object"]["metadata"]
+    except:
+        print("Error processing payment")
+        doc["message"] = "Error processing data payload"
+        db.collection("orders").add(doc)
+        return -1
+
+    
     address = customer_details["address"]
     state = address["state"]
     country = address["country"]
