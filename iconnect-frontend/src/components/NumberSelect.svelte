@@ -17,12 +17,17 @@
 </div>
 
 <style>
-  input {
+  .val {
     border: none;
     background-color: rgb(244, 244, 244);
     width: 3vw;
     text-align: center;
     font-size: 18px;
+  }
+
+  .val:focus {
+    outline: none;
+    border-bottom: 2px solid black;
   }
 
   .val::-webkit-inner-spin-button, .val::-webkit-outer-spin-button {

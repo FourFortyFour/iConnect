@@ -62,14 +62,6 @@
     justify-content: space-between;
   }
 
-  .quantity {
-    border: none;
-    background-color: rgb(244, 244, 244);
-    width: 3vw;
-    text-align: center;
-    font-size: 18px;
-  }
-
   .price {
     text-align: right;
   }
