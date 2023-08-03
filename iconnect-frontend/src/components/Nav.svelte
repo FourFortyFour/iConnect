@@ -77,8 +77,9 @@
     background: rgb(110, 226, 245);
     background: linear-gradient(
       90deg,
-      rgba(110, 226, 245, 1) 0%,
-      rgba(164, 0, 255, 1) 100%
+      rgb(194, 114, 237) 10%,
+      rgb(7, 151, 234) 50%,
+      rgb(194, 114, 237) 100%
     );
     padding: 0.5%;
   }

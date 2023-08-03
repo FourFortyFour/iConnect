@@ -21,6 +21,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "Cabin Condensed", sans-serif;
+    /* position: relative; */
   }
   a {
     text-decoration: none;
@@ -29,17 +30,18 @@
   footer {
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0.5em;
     font-size: large;
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 2.5rem;
   }
 
   .logo-footer {
-    height: 40%;
-    width: 40%;
+    height: 2vw;
+    width: 2vw;
   }
 
   .footer-start {

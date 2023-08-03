@@ -1,7 +1,7 @@
 <main>
   <div class="contact-header">
     <div class="hbar" />
-    <h1>CONTACT</h1>
+    <h1>CONTACT US</h1>
     <div class="hbar" />
   </div>
   <section>
@@ -18,9 +18,9 @@
         />
       </label>
       <label for="msg">
-        <textarea
+        <input
           name="msg"
-          id=""
+          id="user-message"
           cols="30"
           rows="10"
           placeholder="Message"
@@ -29,11 +29,6 @@
       </label>
       <button>Send</button>
     </form>
-    <img
-      class="contact-mainimage"
-      src="/svgs/contactpage.svg"
-      alt="contact us"
-    />
   </section>
 </main>
 
@@ -41,13 +36,13 @@
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
 
   * {
-    margin: 0px;
     font-family: "Cabin Condensed", sans-serif;
   }
-  h1 {
-    margin: 0;
-  }
+
   main {
+    height: 100vh;
+    background-size: cover;
+    background-image: url("/svgs/stacked-waves-haikei.svg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,12 +77,6 @@
     margin: 0 10px;
   }
 
-  .contact-mainimage {
-    flex: 0.4;
-    display: flex;
-    justify-content: center;
-  }
-
   label {
     width: 70%;
     margin-bottom: 2%;
@@ -101,7 +90,7 @@
     padding: 2%;
   }
 
-  textarea {
+  #user-message {
     font-size: 18px;
     border-radius: 25px;
     width: 100%;
