@@ -4,23 +4,22 @@
   console.log(data.product);
 </script>
 
-<div class="content">
+<div class="page">
   <aside />
-  <main class="order-form">
-    <h1>{data.product.name}</h1>
-    <h2>{data.product.price}</h2>
-    <p>{data.product.description}</p>
+  <main class="content-holder">
+    <div class="product-img-holder"><img class="product-img" src="/imgs/nfc_card.jpg" alt=""></div>
     <form action="?/pay" method="post" use:enhance>
-      <label>
-        Email:
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Quantity:
-        <input type="number" name="quantity" />
-      </label>
-      <button>Buy Now</button>
+      <h1 style="margin-bottom: 1vh;">{data.product.name}</h1>
+      <div class="price-select">
+        <input type="number" class="quantity" name="quantity" min="0" placeholder="1"/>
+        <h2 class="price">AED {data.product.price}</h2>
+      </div>
+      <p>{data.product.description}</p>
+      <input class="email" type="email" name="email" placeholder="any@email.com"/>
+      
+      <div class="btn-holder"><button>Buy Now</button></div>
     </form>
+    
   </main>
   <aside />
 </div>
@@ -30,26 +29,82 @@
 
   * {
     font-family: "Cabin Condensed", sans-serif;
+    margin: 0;
   }
-  .content {
+  .page {
     display: flex;
   }
-  .order-form {
+  .content-holder {
+    display: flex;
     flex: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: start;
     /* justify-content: center; */
-    background-color: gainsboro;
+    margin-top: 3%;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left: 2%;
+    flex: 3;
+    /* align-items: center; */
+  }
+
+  form > * {
+    margin-bottom: 2vh;
+  }
+
+  .price-select {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .quantity {
+    border: none;
+    background-color: rgb(244, 244, 244);
+    width: 3vw;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .price {
+    text-align: right;
+  }
+
+  .product-img-holder {
+    margin-right: 2%;
+    flex: 4;
+  }
+
+  .product-img {
+    width: 100%;
+  }
+
+  .email {
+    font-size: 18px;
+    border-radius: 25px;
+    /* width: 100%; */
+    border: 0.05px solid black;
+    padding: 2%;
   }
   aside {
     flex: 1;
   }
+
+  .btn-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    background-color: black;
+    border: none;
+    padding: 2%;
+    border-radius: 52px;
+    color: white;
+    font-size: 18px;
+    width: 25%;
+  }
+  
 </style>
