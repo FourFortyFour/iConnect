@@ -1,0 +1,44 @@
+<script>
+  export let name;
+  let value = 1;
+</script>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+
+<div class="number-selector">
+  <input {name} class="val" type="number" bind:value required min="1"/>
+  <div class="btns">
+    <span class="icn material-symbols-outlined" on:click={() => value === 1? 1 : value--}> chevron_left </span>
+    <span class="icn material-symbols-outlined" on:click={() => value++}> chevron_right </span>
+  </div>
+</div>
+
+<style>
+  input {
+    border: none;
+    background-color: rgb(244, 244, 244);
+    width: 3vw;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .val::-webkit-inner-spin-button, .val::-webkit-outer-spin-button {
+    display: none;
+  }
+  .number-selector {
+    display: flex;
+  }
+
+  .icn {
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .icn:hover {
+    background-color: rgb(244, 244, 244);
+  }
+</style>

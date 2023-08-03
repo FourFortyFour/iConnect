@@ -20,7 +20,7 @@ export async function load({ params }) {
 }
 
 const stripe = Stripe(
-  STRIPE_SECRET_KEY
+  "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
 );
 
 export const actions = {
@@ -37,7 +37,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 20000,
+            unit_amount: 999,
           },
           quantity: quantity,
         },
