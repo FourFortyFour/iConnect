@@ -15,7 +15,7 @@
         <h2 class="price">AED {data.product.price}</h2>
       </div>
       <p>{data.product.description}</p>
-      <input class="email" type="email" name="email" placeholder="any@email.com"/>
+      <input class="email" type="email" name="email" placeholder="any@email.com" required/>
       
       <div class="btn-holder"><button>Buy Now</button></div>
     </form>
