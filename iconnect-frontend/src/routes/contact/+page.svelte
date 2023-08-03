@@ -43,6 +43,7 @@
     height: 100vh;
     background-size: cover;
     background-image: url("/svgs/stacked-waves-haikei.svg");
+    background-position: bottom;
     display: flex;
     flex-direction: column;
     align-items: center;
