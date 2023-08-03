@@ -1,8 +1,7 @@
 <main>
   <div class="contact-header">
-    <div class="hbar" />
     <h1>CONTACT US</h1>
-    <div class="hbar" />
+    <img class="contactimg" src="/imgs/icon-contact.png" alt="" />
   </div>
   <section>
     <form action="" method="post">
@@ -14,6 +13,14 @@
           type="email"
           name="email"
           placeholder="email@mail.com"
+          required
+        />
+      </label>
+      <label for="phonenum">
+        <input
+          type="number"
+          name="phonenum"
+          placeholder="+971501234567"
           required
         />
       </label>
@@ -48,6 +55,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   section {
     display: flex;
     flex-direction: row;
@@ -58,6 +66,7 @@
   section > * {
     padding: 4%;
   }
+
   form {
     display: flex;
     flex-direction: column;
@@ -67,20 +76,18 @@
 
   .contact-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .hbar {
-    flex-grow: 1;
-    height: 5px;
-    background-color: rgb(225, 6, 6);
-    border-radius: 5px;
-    margin: 0 10px;
+
+  .contactimg {
+    width: 5vw;
   }
 
   label {
-    width: 70%;
-    margin-bottom: 2%;
+    width: 60vw;
+    margin-bottom: 1%;
   }
 
   input {
@@ -98,6 +105,7 @@
     border: 0.05px solid black;
     padding: 2%;
   }
+
   button {
     background-color: black;
     color: white;
