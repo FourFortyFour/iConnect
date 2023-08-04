@@ -93,13 +93,18 @@
   }
 
   button {
-    background-color: black;
+    background-color: #444444be;
+    transition: all 250ms ease-in-out 0s;
     border: none;
     padding: 2%;
     border-radius: 52px;
     color: white;
     font-size: 18px;
     width: 25%;
+  }
+
+  button:hover {
+    background-color: #444444;
   }
   
 </style>

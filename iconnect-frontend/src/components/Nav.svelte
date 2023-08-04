@@ -54,10 +54,6 @@
     background-color: #444444;
   }
 
-  .navbar:hover {
-    background-color: #444444;
-  }
-
   .navbar:n .nav__links {
     list-style: none;
   }
