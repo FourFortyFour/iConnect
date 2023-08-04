@@ -15,7 +15,7 @@
   <SpinningCard></SpinningCard>
   <Wave />
 </section>
-<!-- <About /> -->
+<About />
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");

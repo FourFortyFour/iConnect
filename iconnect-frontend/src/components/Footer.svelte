@@ -15,7 +15,8 @@
 <style>
   footer {
     width: 100vw;
-    height: 100px;
+    /* height: 100px; */
+    margin-top: 2%;
     bottom: 0;
     position: absolute;
     background-color: #444444;
