@@ -1,54 +1,64 @@
 <footer>
-  <section>
-    <span class="footer-start">2023 iConnect. All rights reserved</span>
-  </section>
-  <section>
-    <img
-      class="logo-footer"
-      src="/svgs/radiantlogo.svg"
-      alt="logo of iconnect"
-    />
-  </section>
-  <section class="terms_n_conditions">
-    <a href="*">Terms of Use</a>
-    <a href="*">Privacy Policy</a>
-  </section>
+  <li class="foot_t">2023 iConnect. All rights reserved</li>
+  <img
+    class="foot_logo"
+    src="/logos/logo-no-background.png"
+    alt="company logo"
+    draggable="false"
+  />
+  <ul class="foot_con">
+    <li class="foot_t2">TERMS OF USE</li>
+    <li class="foot_t3">PRIVACY POLICY</li>
+  </ul>
 </footer>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: "Cabin Condensed", sans-serif;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
   footer {
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5em;
-    font-size: large;
-    position: absolute;
+    width: 100vw;
+    height: 100px;
     bottom: 0;
-    width: 100%;
+
+    background-color: #444444;
+    z-index: 100000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    user-select: none;
   }
 
-  .logo-footer {
-    height: 2vw;
-    width: 2vw;
+  .foot_con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-end;
   }
 
-  .footer-start {
-    color: white;
+  .foot_t,
+  .foot_t2,
+  .foot_t3 {
+    color: #ffffff;
+    font-family: "Cabin Condensed";
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    list-style: none;
   }
 
-  .terms_n_conditions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  .foot_t {
+    margin-left: 20px;
+  }
+
+  .foot_logo {
+    width: 5%;
+  }
+
+  .foot_t2,
+  .foot_t3 {
+    cursor: pointer;
+
+    padding: 20px;
   }
 </style>
