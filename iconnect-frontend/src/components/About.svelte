@@ -28,9 +28,9 @@
       alt="statue holding a card"
     />
   </div> -->
-  <div class="statue">
-    <img class="statue" src="/imgs/card_statue.png" alt="" />
-  </div>
+  <!-- <div class="statue"> -->
+  <img class="statue" src="/imgs/card_statue.png" alt="" />
+  <!-- </div> -->
 </section>
 
 <style>
@@ -44,6 +44,7 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: 130vh;
     padding: 0 0 0 40px;
     z-index: 3;
@@ -59,7 +60,7 @@
   .aboutus {
     font-family: "Cabin Condensed";
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3vw;
     letter-spacing: 10px;
     color: #444444;
   }
@@ -67,7 +68,7 @@
   .p4 {
     font-family: "Cabin Condensed";
     font-weight: 600;
-    font-size: 30px;
+    font-size: 2vw;
     letter-spacing: normal;
     color: #444444;
     list-style: none;
@@ -92,8 +93,27 @@
   } */
 
   .statue {
+    width: 40vw;
+    height: auto;
     background-image: url(/svgs/statuebg.svg);
     z-index: 1;
     overflow-x: hidden;
+  }
+  @media (max-width: 600px) {
+    .about {
+      flex-direction: column;
+    }
+
+    .container,
+    .statue {
+      width: 100%;
+    }
+
+    .aboutus {
+      font-size: 5vw;
+    }
+    .p4 {
+      font-size: 4vw;
+    }
   }
 </style>
