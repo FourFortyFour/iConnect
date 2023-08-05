@@ -80,16 +80,6 @@
     overflow-y: hidden;
   }
 
-  .container2 {
-    aspect-ratio: 7/5;
-    width: 80vw;
-    height: 100vh;
-    grid-area: 12/18/51/61;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-  }
-
   .statue {
     background-image: url(/svgs/statuebg.svg);
     z-index: 1;
