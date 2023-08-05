@@ -29,7 +29,7 @@
     />
   </div> -->
   <div class="statue">
-    <img class="statue" src="/imgs/card_statue.png" alt="">
+    <img class="statue" src="/imgs/card_statue.png" alt="" />
   </div>
 </section>
 
@@ -80,6 +80,7 @@
     overflow-y: hidden;
   }
 
+  /*
   .container2 {
     aspect-ratio: 7/5;
     width: 80vw;
@@ -88,7 +89,7 @@
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
-  }
+  } */
 
   .statue {
     background-image: url(/svgs/statuebg.svg);

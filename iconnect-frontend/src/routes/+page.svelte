@@ -7,7 +7,7 @@
   import About from "../components/About.svelte";
 </script>
 
-<!-- <Spacer /> -->
+<Spacer />
 <section class="home">
   <HeroText />
   <BuyLink />
