@@ -1,4 +1,9 @@
+<script>
+  import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
+</script>
+
 <main>
+  <Spacer />
   <div class="contact-header">
     <h1>CONTACT US</h1>
     <img class="contactimg" src="/imgs/icon-contact.png" alt="" />
@@ -48,9 +53,6 @@
 
   main {
     height: 100vh;
-    background-size: cover;
-    background-image: url("/svgs/stacked-waves-haikei.svg");
-    background-position: bottom;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,6 +77,7 @@
   }
 
   .contact-header {
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;

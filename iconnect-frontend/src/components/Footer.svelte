@@ -14,7 +14,7 @@
 
 <style>
   footer {
-    width: 100vw;
+    width: 100%;
     /* height: 100px; */
     margin-top: 2%;
     bottom: 0;
@@ -25,7 +25,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
     user-select: none;
   }
 
@@ -34,6 +33,7 @@
     flex-direction: row;
     align-items: center;
     justify-self: flex-end;
+    gap: 1rem;
   }
 
   .foot_t,
@@ -41,7 +41,7 @@
   .foot_t3 {
     color: #ffffff;
     font-family: "Cabin Condensed";
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 2px;
     text-decoration: none;
@@ -53,13 +53,39 @@
   }
 
   .foot_logo {
-    width: 5%;
+    width: 5rem;
+    height: auto;
   }
 
   .foot_t2,
   .foot_t3 {
     cursor: pointer;
-
     padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .foot_logo {
+      width: 4rem;
+      /* margin-bottom: 1rem; */
+    }
+
+    .foot_con {
+      /* flex-direction: column; */
+      margin-bottom: 1rem;
+      gap: 0.5rem;
+    }
+
+    .foot_t,
+    .foot_t2,
+    .foot_t3 {
+      font-size: 1rem;
+      padding: 0;
+    }
   }
 </style>

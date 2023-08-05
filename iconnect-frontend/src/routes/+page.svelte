@@ -7,12 +7,11 @@
   import About from "../components/About.svelte";
 </script>
 
-
 <Spacer />
 <section class="home">
   <HeroText />
-  <BuyLink/>
-  <SpinningCard></SpinningCard>
+  <BuyLink />
+  <SpinningCard />
   <Wave />
 </section>
 <About />
@@ -64,8 +63,5 @@
 
   /* Landing links */
 
-  
-
   /* End of links */
-  
 </style>

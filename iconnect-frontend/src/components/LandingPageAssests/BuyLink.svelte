@@ -1,10 +1,11 @@
 <a href="/order" class="buy">CONNECT NOW</a>
 
 <style>
-      .buy {
+  .buy {
     width: 20vw;
-    height: 20vh;
-    padding: 10px 5px;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
 
     letter-spacing: 5px;
     font-size: 200%;
@@ -44,5 +45,15 @@
       rgba(140, 28, 255, 1) 0%,
       rgba(110, 226, 245, 1) 100%
     );
+  }
+  @media (max-width: 768px) {
+    .buy {
+      width: 40vw;
+      padding: 10px;
+      height: 10vh;
+      font-size: 100%;
+      /* border-radius: 40px; */
+      /* grid-area: 41/25/43/55; */
+    }
   }
 </style>

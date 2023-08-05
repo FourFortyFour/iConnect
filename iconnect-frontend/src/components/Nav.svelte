@@ -1,3 +1,7 @@
+<script>
+  let open = false;
+</script>
+
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0"
@@ -17,8 +21,27 @@
       <li class="navitem"><a href="/order">GET YOUR OWN</a></li>
     </ul>
   </nav>
-  <dt>
-  </dt>
+  <dt />
+  <button class="phone-dropdown" on:click={() => (open = !open)}>
+    <div />
+    <div />
+    <div />
+  </button>
+
+  {#if open}
+    <div class="active-dropdown">
+      <a href="/">
+        <img
+          class="logo dropdown-logo"
+          src="/logos/logo-no-background.png"
+          draggable="false"
+          alt="logo"
+        />
+      </a>
+      <a class="dropdown-item" href="/contact">CONTACT</a>
+      <a class="dropdown-item" href="/order">GET YOUR OWN</a>
+    </div>
+  {/if}
 </header>
 
 <style>
@@ -32,9 +55,9 @@
   .navbar {
     position: sticky;
     top: 2vh;
+    /* top: 2rem; */
     margin: 2vh 0.5vw 0;
     /* grid-area: 2/2/2/12; */
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,6 +71,7 @@
     user-select: none;
     z-index: 4;
     padding: 3vh 0;
+    /* padding: 1rem 2rem; */
   }
 
   .navbar:hover {
@@ -60,16 +84,18 @@
 
   .nav__links li {
     display: inline-block;
-    padding: 0px 50px;
+    /* padding: 0px 50px; */
+    padding: 0 1rem;
   }
 
   .nav__links li a {
     transition: all 500ms ease-in-out 0s;
+    font-size: 2rem;
   }
 
   .nav__links li a:hover {
     font-size: 30px;
-    font-weight: 700px;
+    font-weight: 700;
     color: #6ee2f5;
     letter-spacing: 10px;
   }
@@ -91,7 +117,6 @@
   .logo {
     padding-left: 20px;
     width: 100%;
-
     cursor: pointer;
     user-select: none;
   }
@@ -99,7 +124,67 @@
   .icon-link {
     width: 5%;
   }
+  .phone-dropdown {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
 
+  .phone-dropdown > div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+  .active-dropdown {
+    position: absolute;
+    background-color: #444444;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+  .active-dropdown .dropdown-logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  .active-dropdown .dropdown-item {
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    font-family: "Cabin Condensed";
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 7px;
+  }
+
+  .active-dropdown .dropdown-item:hover {
+    color: #6ee2f5;
+  }
+  @media (max-width: 768px) {
+    .nav__links {
+      display: none;
+    }
+
+    .phone-dropdown {
+      display: flex;
+    }
+
+    .nav__links li a {
+      font-size: 1rem;
+    }
+  }
   /* .clearing {
     margin-bottom: 7%;
     opacity: 0%;

@@ -1,28 +1,38 @@
 <script>
   import { enhance } from "$app/forms";
   import NumberSelect from "../../components/NumberSelect.svelte";
+  import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
   export let data;
-  console.log(data.product);
+
+  // console.log(data.product);
 </script>
 
 <div class="page">
+  <Spacer />
   <aside />
   <main class="content-holder">
-    <div class="product-img-holder"><img class="product-img" src="/imgs/nfc_card_og.jpg" alt=""></div>
+    <div class="product-img-holder">
+      <img class="product-img" src="/imgs/nfc_card_og.jpg" alt="" />
+    </div>
     <form action="?/pay" method="post" use:enhance>
       <h1 style="margin-bottom: 1vh;">{data.product.name}</h1>
       <div class="price-select">
         <!-- <input type="number" class="quantity" name="quantity" min="0" value=1/> -->
-        <NumberSelect name="quantity"></NumberSelect>
+        <NumberSelect name="quantity" />
         <h2 class="price">AED {data.product.price}</h2>
       </div>
       <h3>Description</h3>
       <p>{data.product.description}</p>
-      <input class="email" type="email" name="email" placeholder="any@email.com" required/>
-      
+      <input
+        class="email"
+        type="email"
+        name="email"
+        placeholder="any@email.com"
+        required
+      />
+
       <div class="btn-holder"><button>Buy Now</button></div>
     </form>
-    
   </main>
   <aside />
 </div>
@@ -106,5 +116,4 @@
   button:hover {
     background-color: #444444;
   }
-  
 </style>
