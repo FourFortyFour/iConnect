@@ -14,7 +14,7 @@
 
 <style>
   footer {
-    width: 100vw;
+    width: 100%;
     /* height: 100px; */
     margin-top: 2%;
     bottom: 0;

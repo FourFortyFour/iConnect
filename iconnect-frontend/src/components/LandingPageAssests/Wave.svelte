@@ -42,6 +42,11 @@
     width: calc(105% + 0.2vw);
     height: 80vh;
   }
+  @media (max-width: 768px) {
+    .wave svg {
+      height: 30vh;
+    }
+  }
 
   .wave .shape-fill {
     fill: #ffffff;

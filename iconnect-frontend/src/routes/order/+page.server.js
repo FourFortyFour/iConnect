@@ -19,8 +19,7 @@ export async function load({ params }) {
 
 }
 
-const stripe = Stripe(
-);
+const stripe = Stripe(STRIPE_SECRET_KEY);
 
 export const actions = {
   pay: async ({ request }) => {
