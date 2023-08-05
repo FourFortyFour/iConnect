@@ -44,10 +44,11 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     height: 130vh;
     padding: 0 0 0 40px;
     z-index: 3;
+    justify-content: space-between;
   }
 
   .container {
@@ -82,8 +83,9 @@
   }
 
   .statue {
-    width: 40vw;
-    height: auto;
+    /* width: 40vw; */
+    /* height: auto; */
+    width: 55%;
     background-image: url(/svgs/statuebg.svg);
     z-index: 1;
     overflow-x: hidden;

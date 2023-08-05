@@ -21,7 +21,7 @@
   .p,
   .p2 {
     font-family: "Cabin Condensed";
-    font-size: 4vw;
+    font-size: 3vw;
     letter-spacing: 7px;
     line-height: 100px;
     font-weight: 600;
