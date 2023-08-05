@@ -20,7 +20,6 @@ export async function load({ params }) {
 }
 
 const stripe = Stripe(
-  "sk_test_51KxejGD27b5b7CLZonHYNPNf3a4YGSYFGSo7qGThNX9ryPZDumT1eaTbQgiplH6G0A6RsWDwDqpP8nnbsNGNnLMb00iqmNuqza"
 );
 
 export const actions = {

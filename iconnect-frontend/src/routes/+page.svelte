@@ -1,21 +1,20 @@
 <script>
-  // import SpinningCard from "../components/SpinningCard.svelte";
-  // import Wave from "../components/LandingPageAssests/Wave.svelte";
-  // import BuyLink from "../components/LandingPageAssests/BuyLink.svelte";
-  // import HeroText from "../components/LandingPageAssests/HeroText.svelte";
-  // import Spacer from "../components/LandingPageAssests/Spacer.svelte";
-  // import About from "../components/About.svelte";
+  import SpinningCard from "../components/SpinningCard.svelte";
+  import Wave from "../components/LandingPageAssests/Wave.svelte";
+  import BuyLink from "../components/LandingPageAssests/BuyLink.svelte";
+  import HeroText from "../components/LandingPageAssests/HeroText.svelte";
+  import Spacer from "../components/LandingPageAssests/Spacer.svelte";
+  import About from "../components/About.svelte";
 </script>
 
 <!-- <Spacer /> -->
 <section class="home">
-  <!-- <HeroText /> -->
-  <!-- <BuyLink /> -->
-  <!-- <SpinningCard /> -->
-  <!-- <Wave /> -->
+  <HeroText />
+  <BuyLink />
+  <SpinningCard />
+  <Wave />
 </section>
-
-<!-- <About /> -->
+<About />
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
