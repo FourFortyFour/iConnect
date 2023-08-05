@@ -90,11 +90,11 @@
 
   .nav__links li a {
     transition: all 500ms ease-in-out 0s;
-    font-size: 2rem;
+    font-size: 1.70rem;
   }
 
   .nav__links li a:hover {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
     color: #6ee2f5;
     letter-spacing: 10px;
