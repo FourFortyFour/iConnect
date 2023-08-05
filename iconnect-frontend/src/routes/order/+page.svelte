@@ -8,21 +8,28 @@
 </script>
 
 <div class="page">
-  <Spacer />
+  <!-- <Spacer /> -->
   <aside />
   <main class="content-holder">
     <div class="product-img-holder">
-      <img class="product-img" src="/imgs/nfc_card_og.jpg" alt="" />
+      <div class="img-containment">
+        <img class="product-img" src="/imgs/nfc_card_og.jpg" alt="" />
+      </div>
     </div>
     <form action="?/pay" method="post" use:enhance>
       <h1 style="margin-bottom: 1vh;">{data.product.name}</h1>
       <div class="price-select">
-        <!-- <input type="number" class="quantity" name="quantity" min="0" value=1/> -->
         <NumberSelect name="quantity" />
         <h2 class="price">AED {data.product.price}</h2>
       </div>
       <h3>Description</h3>
       <p>{data.product.description}</p>
+      <h3>Features</h3>
+      <ul class="features">
+        {#each data.product.features as feature}
+          <li>{feature}</li>
+        {/each}
+      </ul>
       <input
         class="email"
         type="email"
@@ -49,7 +56,7 @@
   }
   .content-holder {
     display: flex;
-    flex: 3;
+    flex: 4;
     align-items: start;
     /* justify-content: center; */
     margin-top: 3%;
@@ -59,7 +66,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 2%;
-    flex: 3;
+    flex: 4;
     /* align-items: center; */
   }
 
@@ -77,12 +84,22 @@
   }
 
   .product-img-holder {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
     margin-right: 2%;
+    /* flex: 4; */
     flex: 4;
+  }
+
+  .img-containment {  
+    width: 70%;
+    /* overflow: hidden; */
   }
 
   .product-img {
     width: 100%;
+    object-fit: cover;
   }
 
   .email {
