@@ -1,5 +1,21 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { onMount } from "svelte";
   let open = false;
+
+  let handlePhoneMenuClick = (event) => {
+    !event.target.closest(".active-dropdown") &&
+    !event.target.closest(".phone-dropdown")
+      ? (open = false)
+      : null;
+  };
+
+  onMount(() => {
+    document.body.addEventListener("click", handlePhoneMenuClick);
+    return () => {
+      document.body.removeEventListener("click", handlePhoneMenuClick);
+    };
+  });
 </script>
 
 <link
@@ -16,33 +32,35 @@
     />
   </a>
   <nav>
-    <ul class="nav__links">
+    <ul class="nav_links">
       <li class="navitem"><a href="/contact">CONTACT</a></li>
       <li class="navitem"><a href="/order">GET YOUR OWN</a></li>
     </ul>
   </nav>
   <dt />
+</header>
+{#if !open}
   <button class="phone-dropdown" on:click={() => (open = !open)}>
     <div />
     <div />
     <div />
   </button>
+{/if}
 
-  {#if open}
-    <div class="active-dropdown">
-      <a href="/">
-        <img
-          class="logo dropdown-logo"
-          src="/logos/logo-no-background.png"
-          draggable="false"
-          alt="logo"
-        />
-      </a>
-      <a class="dropdown-item" href="/contact">CONTACT</a>
-      <a class="dropdown-item" href="/order">GET YOUR OWN</a>
-    </div>
-  {/if}
-</header>
+{#if open}
+  <div class="active-dropdown" in:fade={{ delay: 300 }}>
+    <a href="/">
+      <img
+        class="dropdown-logo"
+        src="/logos/logo-no-background.png"
+        draggable="false"
+        alt="logo"
+      />
+    </a>
+    <a class="dropdown-item" href="/contact">CONTACT</a>
+    <a class="dropdown-item" href="/order">GET YOUR OWN</a>
+  </div>
+{/if}
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
@@ -78,22 +96,22 @@
     background-color: #444444;
   }
 
-  .navbar:n .nav__links {
+  .navbar:n .nav_links {
     list-style: none;
   }
 
-  .nav__links li {
+  .nav_links li {
     display: inline-block;
     /* padding: 0px 50px; */
     padding: 0 1rem;
   }
 
-  .nav__links li a {
+  .nav_links li a {
     transition: all 500ms ease-in-out 0s;
-    font-size: 1.70rem;
+    font-size: 1.7rem;
   }
 
-  .nav__links li a:hover {
+  .nav_links li a:hover {
     font-size: 2rem;
     font-weight: 700;
     color: #6ee2f5;
@@ -127,33 +145,38 @@
   .phone-dropdown {
     display: none;
     flex-direction: column;
+    position: fixed;
+    align-items: center;
     justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    border: none;
+    width: 3rem;
+    height: 3rem;
+    background: #444444be;
+    border-radius: 50%;
+    top: 1em;
     cursor: pointer;
-    padding: 0;
+    left: calc(50% - 1.5rem);
     z-index: 10;
   }
 
   .phone-dropdown > div {
-    width: 2rem;
+    width: 1.5rem;
     height: 0.25rem;
-    background: #ffffff;
+    background: #000000;
     border-radius: 10px;
     transition: all 0.3s linear;
-    position: relative;
+    /* position: relative; */
     transform-origin: 1px;
   }
   .active-dropdown {
-    position: absolute;
+    position: fixed;
     background-color: #444444;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
+    justify-content: center;
+    z-index: 10;
   }
   .active-dropdown .dropdown-logo {
     width: 50px;
@@ -172,8 +195,14 @@
   .active-dropdown .dropdown-item:hover {
     color: #6ee2f5;
   }
+
   @media (max-width: 768px) {
-    .nav__links {
+    .nav_links,
+    .navbar {
+      display: none;
+    }
+
+    .logo {
       display: none;
     }
 
@@ -181,7 +210,7 @@
       display: flex;
     }
 
-    .nav__links li a {
+    .nav_links li a {
       font-size: 1rem;
     }
   }

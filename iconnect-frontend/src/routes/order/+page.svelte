@@ -92,7 +92,7 @@
     flex: 4;
   }
 
-  .img-containment {  
+  .img-containment {
     width: 70%;
     /* overflow: hidden; */
   }
