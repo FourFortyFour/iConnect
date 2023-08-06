@@ -48,7 +48,7 @@
 {/if}
 
 {#if open}
-  <div class="active-dropdown" in:fade={{ delay: 300 }}>
+  <div class="active-dropdown" in:fade={{ delay: 100 }}>
     <a href="/">
       <img
         class="dropdown-logo"
@@ -150,7 +150,7 @@
     justify-content: space-around;
     width: 3rem;
     height: 3rem;
-    background: #444444be;
+    background: #700aec57;
     border-radius: 50%;
     top: 1em;
     cursor: pointer;
@@ -177,6 +177,7 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+    /* padding: 10px; */
   }
   .active-dropdown .dropdown-logo {
     width: 50px;
@@ -208,6 +209,7 @@
 
     .phone-dropdown {
       display: flex;
+      /* margin-bottom: 20px; */
     }
 
     .nav_links li a {

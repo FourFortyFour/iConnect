@@ -170,4 +170,19 @@
       fill-opacity: 80%;
     }
   }
+  @media (max-width: 768px) {
+    /* this doesnt really do anything, trying to get it to cover that white space I was talking about */
+    .spacer {
+      height: 100vh;
+      width: 100vw;
+      scale: 2.5;
+      /* position: fixed; */
+      position: fixed;
+      top: 0;
+
+      background-repeat: repeat-x;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
 </style>

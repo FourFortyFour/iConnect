@@ -133,4 +133,9 @@
   button:hover {
     background-color: #444444;
   }
+  @media (max-width: 768px) {
+    .content-holder {
+      margin-top: 5rem;
+    }
+  }
 </style>
