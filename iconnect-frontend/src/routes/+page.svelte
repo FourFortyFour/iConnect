@@ -53,8 +53,8 @@
     position: relative;
 
     display: grid;
-    grid-template-columns: 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw 2vw;
-    grid-template-rows: 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh 2vh;
+    grid-template-columns: repeat(50, 2vw);
+    grid-template-rows: repeat(50, 2vh);
     align-items: center;
 
     height: 100vh;

@@ -28,21 +28,13 @@
     <div />
   </button>
 
-  {#if open}
-    <div class="active-dropdown">
-      <a href="/">
-        <img
-          class="logo dropdown-logo"
-          src="/logos/logo-no-background.png"
-          draggable="false"
-          alt="logo"
-        />
-      </a>
-      <a class="dropdown-item" href="/contact">CONTACT</a>
-      <a class="dropdown-item" href="/order">GET YOUR OWN</a>
-    </div>
-  {/if}
 </header>
+{#if open}
+  <div class="active-dropdown">
+    <a class="dropdown-item" href="/contact">CONTACT</a>
+    <a class="dropdown-item" href="/order">GET YOUR OWN</a>
+  </div>
+{/if}
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
@@ -173,6 +165,22 @@
     color: #6ee2f5;
   }
   @media (max-width: 768px) {
+    .navbar {
+      position: relative;
+      border-radius: 0%;
+      top: 0;
+      margin: 0;
+      padding: 2%;
+      background-color: #444444;
+    }
+
+    .logo{
+      padding-left: 0%;
+    }
+
+    .icon-link {
+      width: 12vw;
+    }
     .nav__links {
       display: none;
     }
