@@ -13,22 +13,15 @@
   ],
   "hosting": {
     "site": "iconnectae",
-    "public": "public",
+    "source": "iconnect-frontend",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
     "frameworksBackend": {
-      "region": "europe-west1",
-      "minInstances": 1
-    },
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+      "region": "europe-west1"
+    }
   },
   "emulators": {
     "functions": {
