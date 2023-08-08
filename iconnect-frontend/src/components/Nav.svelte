@@ -139,7 +139,6 @@
     transform-origin: 1px;
   }
   .active-dropdown {
-    position: absolute;
     background-color: #444444;
     width: 100%;
     display: flex;

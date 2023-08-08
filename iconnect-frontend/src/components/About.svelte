@@ -82,6 +82,10 @@
     overflow-y: hidden;
   }
 
+  .p4 > * {
+    margin-bottom: 2%;
+  }
+
   .statue {
     /* width: 40vw; */
     /* height: auto; */

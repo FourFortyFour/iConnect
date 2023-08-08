@@ -65,13 +65,15 @@
 
   @media (max-width: 768px) {
     footer {
+      position: relative;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
     .foot_logo {
-      width: 4rem;
+      width: 10vw;
+      padding: 2%;
       /* margin-bottom: 1rem; */
     }
 
@@ -79,6 +81,10 @@
       /* flex-direction: column; */
       margin-bottom: 1rem;
       gap: 0.5rem;
+    }
+
+    .foot_t, .foot_con {
+      display: none;
     }
 
     .foot_t,
