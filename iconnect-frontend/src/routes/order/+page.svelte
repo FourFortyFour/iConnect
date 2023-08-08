@@ -1,9 +1,8 @@
 <script>
   import { enhance } from "$app/forms";
   import NumberSelect from "../../components/NumberSelect.svelte";
-  import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
+  // import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
   export let data;
-
   // console.log(data.product);
 </script>
 

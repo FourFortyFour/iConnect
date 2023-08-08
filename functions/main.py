@@ -1,5 +1,5 @@
 from firebase_functions import https_fn
-from firebase_admin import initialize_app, firestore, credentials
+from firebase_admin import initialize_app, firestore
 from flask import Flask, request, Response
 import stripe
 import re
@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
+# cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
 fire_app = initialize_app()
 db = firestore.client()
 stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
@@ -17,7 +17,7 @@ app = Flask("internal")
 webhook_sk = os.environ.get("STRIPE_WEBHOOK_KEY")
 
 
-test_email = lambda e: db.collection("icon_mail").add(e)
+confirmation_mail = lambda e: db.collection("icon_mail").add(e)
 
 
 def is_arabic(text: str) -> bool:
@@ -73,6 +73,7 @@ def proc_payment(data: dict):
         "phone": phone,
         "product": product,
     }
+    print(f"Adding order to firestore: {data}")
 
     client_email = {
         "to": email,
@@ -89,8 +90,9 @@ def proc_payment(data: dict):
         },
     }
 
-    # test_email(client_email)
-    # db.collection("orders").add(doc)
+    confirmation_mail(internal_email)
+    confirmation_mail(client_email)
+    db.collection("orders").add(doc)
 
 
 @app.route("/payment_done", methods=["POST"])

@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 // import { preprocess } from 'svelte/compiler';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -13,6 +14,7 @@ const config = {
 			fallback: null,
 			precompress: false,
 		}),
+		// adapter: adapter(),
 	}
 };
 

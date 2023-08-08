@@ -4,7 +4,6 @@ import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
 import { STRIPE_SECRET_KEY } from "$env/static/private";
 
-
 export const prerender = false;
 export async function load({ params }) {
 
