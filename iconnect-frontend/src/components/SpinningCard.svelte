@@ -78,4 +78,11 @@
       transform: rotate(360deg);
     }
   }
+
+
+  @media (max-width: 425px) {
+    .card, .card2 {
+      display: none;
+    }
+  }
 </style>

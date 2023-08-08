@@ -93,6 +93,8 @@
   @media (max-width: 600px) {
     .about {
       flex-direction: column;
+      justify-content: center;
+      padding: 0%;
     }
 
     .container,
@@ -102,9 +104,11 @@
 
     .aboutus {
       font-size: 5vw;
+      text-align: center;
     }
     .p4 {
       font-size: 4vw;
+      padding: 4%;
     }
   }
 </style>

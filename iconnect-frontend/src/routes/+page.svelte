@@ -61,6 +61,15 @@
     width: 100vw;
   }
 
+  @media (max-width: 425px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: auto;
+    }
+  }
+
   /* Landing links */
 
   /* End of links */
