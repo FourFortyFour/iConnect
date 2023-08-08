@@ -51,8 +51,8 @@ export const actions = {
           product_name: "ic-card",
         },
       },
-      success_url: "http://localhost:5173/placed",
-      cancel_url: "http://localhost:5173/bad_checkout",
+      success_url: "/placed",
+      cancel_url: "/bad_checkout",
       shipping_address_collection: {
         allowed_countries: ["AE"],
       },
