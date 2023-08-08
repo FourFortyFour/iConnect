@@ -92,7 +92,7 @@
     flex: 4;
   }
 
-  .img-containment {  
+  .img-containment {
     width: 70%;
     /* overflow: hidden; */
   }
@@ -132,5 +132,10 @@
 
   button:hover {
     background-color: #444444;
+  }
+  @media (max-width: 768px) {
+    .content-holder {
+      margin-top: 5rem;
+    }
   }
 </style>

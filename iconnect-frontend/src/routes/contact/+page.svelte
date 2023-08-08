@@ -117,4 +117,10 @@
     padding: 2% 6%;
     border-radius: 25px;
   }
+
+  @media (max-width: 768px) {
+    .contact-header {
+      margin-top: 5rem;
+    }
+  }
 </style>

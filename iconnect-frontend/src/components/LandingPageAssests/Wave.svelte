@@ -25,11 +25,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
-    line-height: 0;
+    /* line-height: 0; */
 
     transform: rotate(180deg);
 
@@ -45,6 +45,10 @@
   @media (max-width: 768px) {
     .wave svg {
       height: 30vh;
+      width: 100vw;
+    }
+    .wave {
+      width: 100%;
     }
   }
 

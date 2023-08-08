@@ -19,6 +19,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "frameworksBackend": {
+      "region": "europe-west1",
+      "minInstances": 1
+    },
     "rewrites": [
       {
         "source": "**",

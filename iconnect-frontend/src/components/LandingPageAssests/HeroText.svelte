@@ -7,9 +7,8 @@
   .container1 {
     grid-area: 41/1/43/51;
     width: 30vw;
-    max-width: 500px;
+    max-width: 700px;
     height: 200px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -40,19 +39,16 @@
     color: rgba(110, 226, 245, 1);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768) {
     .container1 {
       width: 20vw;
       max-width: 300px;
-      /* height: 100px; */
-      /* grid-area: 41/1/43/51; */
+      font-size: x-large;
     }
 
-    .p,
+    /* .p,
     .p2 {
-      font-size: 7vw;
-      letter-spacing: 5px;
       line-height: 50px;
-    }
+    } */
   }
 </style>

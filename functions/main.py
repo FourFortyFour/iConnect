@@ -52,7 +52,6 @@ def proc_payment(data: dict):
         db.collection("orders").add(doc)
         return -1
 
-    
     address = customer_details["address"]
     state = address["state"]
     country = address["country"]
