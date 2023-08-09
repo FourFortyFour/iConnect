@@ -36,6 +36,13 @@
         placeholder="any@email.com"
         required
       />
+      <input
+        class="URL"
+        type="url"
+        name="companyURL"
+        placeholder="https://www.yourcompany.com or just your company's name"
+        required
+      />
 
       <div class="btn-holder"><button>Buy Now</button></div>
     </form>
@@ -101,7 +108,8 @@
     object-fit: cover;
   }
 
-  .email {
+  .email,
+  .URL {
     font-size: 18px;
     border-radius: 25px;
     /* width: 100%; */
