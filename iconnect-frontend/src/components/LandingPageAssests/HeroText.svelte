@@ -48,6 +48,7 @@
       margin: 7.5% 0;
       padding: 0%;
       height: auto;
+      z-index: 1;
     }
 
     .p {

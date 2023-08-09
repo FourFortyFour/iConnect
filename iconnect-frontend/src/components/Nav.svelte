@@ -1,4 +1,5 @@
 <script>
+  import { fly } from "svelte/transition";
   let open = false;
 </script>
 
@@ -22,7 +23,7 @@
     </ul>
   </nav>
   <dt />
-  <button class="phone-dropdown" on:click={() => (open = !open)}>
+  <button class="phone-dropdown" on:click={() => (open = !open)} on:blur={() => (open = !open)}>
     <div />
     <div />
     <div />
@@ -30,7 +31,7 @@
 
 </header>
 {#if open}
-  <div class="active-dropdown">
+  <div class="active-dropdown" transition:fly|global={{y:-500, duration:2000}}>
     <a class="dropdown-item" href="/contact">CONTACT</a>
     <a class="dropdown-item" href="/order">GET YOUR OWN</a>
   </div>
@@ -42,6 +43,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: "Cabin Condensed", sans-serif;
+    z-index: 2;
   }
 
   .navbar {
@@ -139,12 +141,14 @@
     transform-origin: 1px;
   }
   .active-dropdown {
+    position: absolute;
     background-color: #444444;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
+    /* z-index: 5; */
   }
   .active-dropdown .dropdown-logo {
     width: 50px;
