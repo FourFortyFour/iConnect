@@ -19,7 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"@stripe/stripe-js": "^1.54.1",
-		"firebase": "^10.0.0",
+		"firebase": "^9.4.0",
 		"stripe": "^12.13.0"
 	}
 }

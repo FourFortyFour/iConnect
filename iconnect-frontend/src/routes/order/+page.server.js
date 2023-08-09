@@ -4,7 +4,6 @@ import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
 import { STRIPE_SECRET_KEY } from "$env/static/private";
 
-
 export const prerender = false;
 export async function load({ params }) {
 
@@ -21,12 +20,12 @@ export async function load({ params }) {
 
 const stripe = Stripe(STRIPE_SECRET_KEY);
 
+const baseUrl = import.meta.env.MODE === "development" ? "http://localhost:5173" : "https://iconnectae.web.app"
 export const actions = {
   pay: async ({ request }) => {
     const data = await request.formData();
     const email = data.get("email");
     const quantity = data.get("quantity");
-
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
@@ -35,7 +34,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 999,
+            unit_amount: 40000,
           },
           quantity: quantity,
         },
@@ -52,8 +51,8 @@ export const actions = {
           product_name: "ic-card",
         },
       },
-      success_url: "http://localhost:5173/placed",
-      cancel_url: "http://localhost:5173/bad_checkout",
+      success_url: `${baseUrl}/placed`,
+      cancel_url: `${baseUrl}/bad_checkout`,
       shipping_address_collection: {
         allowed_countries: ["AE"],
       },

@@ -38,8 +38,11 @@ ENV/
 env.bak/
 venv.bak/
 
+# Misc ignores...
 .DS_Store
 build
+.firebase/
+public/
 .svelte-kit
 package
 .env

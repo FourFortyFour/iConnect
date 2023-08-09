@@ -11,7 +11,7 @@ export const actions = {
 
         const contact_msg = { name, email, msg, phonenum }
         const message_collection = collection(db, 'messages');
-        // await addDoc(message_collection, contact_msg);
+        await addDoc(message_collection, contact_msg);
 
     }
 }

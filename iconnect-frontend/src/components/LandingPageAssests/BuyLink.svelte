@@ -1,4 +1,4 @@
-<a href="/order" class="buy">CONNECT NOW</a>
+<a href="/order" class="buy">BUY NOW</a>
 
 <style>
   .buy {

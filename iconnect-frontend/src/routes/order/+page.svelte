@@ -1,9 +1,8 @@
 <script>
   import { enhance } from "$app/forms";
   import NumberSelect from "../../components/NumberSelect.svelte";
-  import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
+  // import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
   export let data;
-
   // console.log(data.product);
 </script>
 
@@ -35,6 +34,13 @@
         type="email"
         name="email"
         placeholder="any@email.com"
+        required
+      />
+      <input
+        class="URL"
+        type="url"
+        name="companyURL"
+        placeholder="https://www.yourcompany.com or just your company's name"
         required
       />
 
@@ -102,7 +108,8 @@
     object-fit: cover;
   }
 
-  .email {
+  .email,
+  .URL {
     font-size: 18px;
     border-radius: 25px;
     /* width: 100%; */
