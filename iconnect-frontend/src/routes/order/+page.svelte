@@ -1,9 +1,13 @@
 <script>
   import { enhance } from "$app/forms";
+  import { writable } from 'svelte/store';
+  import { tweened } from "svelte/motion";
+  import { spring } from "svelte/motion";
+
   import NumberSelect from "../../components/NumberSelect.svelte";
-  // import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
+  
   export let data;
-  // console.log(data.product);
+  const priceVal = writable(data.product.price);
 </script>
 
 <div class="page">
@@ -18,8 +22,8 @@
     <form action="?/pay" method="post" use:enhance>
       <h1 style="margin-bottom: 1vh;">{data.product.name}</h1>
       <div class="price-select">
-        <NumberSelect name="quantity" />
-        <h2 class="price">AED {data.product.price}</h2>
+        <NumberSelect name="quantity" price={priceVal}/>
+        <h2 class="price">AED {$priceVal}</h2>
       </div>
       <h3>Description</h3>
       <p>{data.product.description}</p>
@@ -87,6 +91,7 @@
 
   .price {
     text-align: right;
+    transition: opacity 0.5s ease-in-out;
   }
 
   .product-img-holder {

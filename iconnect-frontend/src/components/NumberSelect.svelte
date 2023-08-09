@@ -1,5 +1,8 @@
 <script>
   export let name;
+  export let price;
+
+  const baseVal = $price;
   let value = 1;
 </script>
 
@@ -9,10 +12,29 @@
 />
 
 <div class="number-selector">
-  <input {name} class="val" type="number" bind:value required min="1"/>
+  <input {name} class="val" type="number" bind:value required min="1" />
   <div class="btns">
-    <span class="icn material-symbols-outlined" on:click={() => value === 1? 1 : value--}> chevron_left </span>
-    <span class="icn material-symbols-outlined" on:click={() => value++}> chevron_right </span>
+    <span
+      class="icn material-symbols-outlined"
+      on:click={() => {
+        if (value !== 1) {
+          value--;
+          price.set($price - baseVal);
+        }
+        
+      }}
+    >
+      chevron_left
+    </span>
+    <span
+      class="icn material-symbols-outlined"
+      on:click={() => {
+        value++;
+        price.set($price + baseVal);
+      }}
+    >
+      chevron_right
+    </span>
   </div>
 </div>
 
@@ -30,7 +52,8 @@
     border-bottom: 2px solid black;
   }
 
-  .val::-webkit-inner-spin-button, .val::-webkit-outer-spin-button {
+  .val::-webkit-inner-spin-button,
+  .val::-webkit-outer-spin-button {
     display: none;
   }
   .number-selector {
