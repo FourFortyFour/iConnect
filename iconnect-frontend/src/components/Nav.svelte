@@ -23,7 +23,7 @@
     </ul>
   </nav>
   <dt />
-  <button class="phone-dropdown" on:click={() => (open = !open)} on:blur={() => (open = !open)}>
+  <button class="phone-dropdown" on:click={() => (open = !open)}>
     <div />
     <div />
     <div />
@@ -31,7 +31,7 @@
 
 </header>
 {#if open}
-  <div class="active-dropdown" transition:fly|global={{y:-500, duration:2000}}>
+  <div class="active-dropdown" transition:fly|global={{y:-100, duration:1000}}>
     <a class="dropdown-item" href="/contact">CONTACT</a>
     <a class="dropdown-item" href="/order">GET YOUR OWN</a>
   </div>

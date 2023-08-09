@@ -146,8 +146,28 @@
     background-color: #444444;
   }
   @media (max-width: 768px) {
-    .content-holder {
-      margin-top: 5rem;
+
+    .img-containment {
+      width: 100%;
+      margin-bottom: 4%;
     }
+
+    .product-img-holder {
+      align-items: center;
+    }
+
+    .content-holder {
+      flex-direction: column;
+      margin-top: 4vh;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    aside {
+      flex: 0.5;
+    }
+
   }
 </style>
