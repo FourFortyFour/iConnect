@@ -19,7 +19,7 @@
     top: 30vh;
     left: 35vw;
     right: 45vw;
-    position: fixed;
+    position: absolute;
     /* scale:0.5; */
     rotate: -25deg;
     /* grid-area: 6/6; */
@@ -37,7 +37,7 @@
     top: 30vh;
     left: 35vw;
     right: 45vw;
-    position: fixed;
+    position: absolute;
     /* width: 1079px; */
     /* height: 685px; */
     /* scale: 0.5; */
