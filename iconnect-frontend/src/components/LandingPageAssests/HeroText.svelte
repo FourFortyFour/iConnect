@@ -39,30 +39,15 @@
     color: rgba(110, 226, 245, 1);
   }
 
-
-  @media (max-width: 425px) {
-
+  @media (max-width: 768px) {
     .container1 {
-      align-items: center;
-      justify-content: center;
+      grid-area: 50/4/19/27;
       margin: 7.5% 0;
       padding: 0%;
-      height: auto;
-      z-index: 1;
+      z-index: 10;
     }
-
-    .p {
-      font-size: 1.75rem;
-      font-weight: bolder;
-      margin-bottom: 2vh;
-    }
-
-    .p2 {
-      font-size: 1.25rem;
-    }
-    .p, .p2 {
-      line-height: normal;
-      text-align: center;
+    li {
+      font-size: 5vw;
     }
   }
 </style>

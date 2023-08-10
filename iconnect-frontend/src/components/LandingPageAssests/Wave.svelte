@@ -48,7 +48,7 @@
       width: 100vw;
     }
     .wave {
-      width: 100%;
+      width: 100vw;
     }
   }
 

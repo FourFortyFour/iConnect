@@ -7,6 +7,7 @@
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0"
 />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 <header class="navbar" id="navbar">
   <a href="/" class="icon-link">
     <img
@@ -17,7 +18,7 @@
     />
   </a>
   <nav>
-    <ul class="nav__links">
+    <ul class="nav_links">
       <li class="navitem"><a href="/contact">CONTACT</a></li>
       <li class="navitem"><a href="/order">GET YOUR OWN</a></li>
     </ul>
@@ -28,10 +29,12 @@
     <div />
     <div />
   </button>
-
 </header>
 {#if open}
-  <div class="active-dropdown" transition:fly|global={{y:-100, duration:1000}}>
+  <div
+    class="active-dropdown"
+    transition:fly|global={{ y: -100, duration: 1000 }}
+  >
     <a class="dropdown-item" href="/contact">CONTACT</a>
     <a class="dropdown-item" href="/order">GET YOUR OWN</a>
   </div>
@@ -72,22 +75,22 @@
     background-color: #444444;
   }
 
-  .navbar:n .nav__links {
+  .navbar:n .nav_links {
     list-style: none;
   }
 
-  .nav__links li {
+  .nav_links li {
     display: inline-block;
     /* padding: 0px 50px; */
     padding: 0 1rem;
   }
 
-  .nav__links li a {
+  .nav_links li a {
     transition: all 500ms ease-in-out 0s;
-    font-size: 1.70rem;
+    font-size: 1.7rem;
   }
 
-  .nav__links li a:hover {
+  .nav_links li a:hover {
     font-size: 2rem;
     font-weight: 700;
     color: #6ee2f5;
@@ -132,7 +135,7 @@
   }
 
   .phone-dropdown > div {
-    width: 2rem;
+    width: 100%;
     height: 0.25rem;
     background: #ffffff;
     border-radius: 10px;
@@ -143,17 +146,14 @@
   .active-dropdown {
     position: absolute;
     background-color: #444444;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
-    /* z-index: 5; */
+    z-index: 5;
   }
-  .active-dropdown .dropdown-logo {
-    width: 50px;
-    margin-bottom: 10px;
-  }
+
   .active-dropdown .dropdown-item {
     color: #ffffff;
     padding: 10px;
@@ -168,23 +168,27 @@
     color: #6ee2f5;
   }
   @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
     .navbar {
-      position: relative;
+      position: sticky;
       border-radius: 0%;
       top: 0;
       margin: 0;
-      padding: 2%;
+      padding: 3.5%;
       background-color: #444444;
+      width: 100vw;
     }
 
-    .logo{
+    .logo {
       padding-left: 0%;
     }
 
     .icon-link {
       width: 12vw;
     }
-    .nav__links {
+    .nav_links {
       display: none;
     }
 
@@ -192,7 +196,7 @@
       display: flex;
     }
 
-    .nav__links li a {
+    .nav_links li a {
       font-size: 1rem;
     }
   }

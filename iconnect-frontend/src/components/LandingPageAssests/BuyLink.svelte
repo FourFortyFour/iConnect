@@ -53,7 +53,7 @@
       height: 10vh;
       font-size: 100%;
       /* border-radius: 40px; */
-      /* grid-area: 41/25/43/55; */
+      grid-area: 41/25/43/55;
     }
   }
 </style>
