@@ -1,6 +1,7 @@
 <section class="about">
   <!-- <div class="break"></div> -->
   <div class="container">
+    <div class="gradient" />
     <h1 class="aboutus">ABOUT US</h1>
     <ul class="p4">
       <li>
@@ -53,7 +54,6 @@
   .container {
     display: flex;
     width: 40vw;
-    margin-top: 1%;
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -114,6 +114,12 @@
     .p4 {
       font-size: 4vw;
       padding: 4%;
+    }
+
+    .gradient {
+      height: 2vh;
+      background:#45C5F7;
+;
     }
   }
 </style>

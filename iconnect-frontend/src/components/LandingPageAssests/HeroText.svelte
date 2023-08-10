@@ -1,5 +1,5 @@
 <ul class="container1">
-  <li class="p">ICONNECT,</li>
+  <li class="p">ICONNECT</li>
   <li class="p2">CONNECT EASIER.</li>
 </ul>
 
@@ -41,6 +41,7 @@
 
   @media (width <=800px) {
     .container1 {
+      width: 90vw;
       grid-area: 40/1/19/27;
       margin: 7.5%;
       padding: 1%;
@@ -48,7 +49,13 @@
     }
     .p,
     .p2 {
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 50px;
+    }
+    .p {
       font-size: 3rem;
+      margin-bottom: 2vh;
     }
   }
 </style>

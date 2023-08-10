@@ -49,11 +49,12 @@
   @media (max-width: 768px) {
     .buy {
       width: 40vw;
-      padding: 10px;
-      height: 10vh;
+      padding: 20px 25px;
+      /* height: 10vh; */
       font-size: 100%;
       /* border-radius: 40px; */
       grid-area: 41/25/43/55;
+      margin-bottom: 2%;
     }
   }
 </style>
