@@ -123,6 +123,7 @@
   @media (max-width: 768px) {
     .inner {
         flex-direction: column;
+        padding: 4%;
     }
 
     p {

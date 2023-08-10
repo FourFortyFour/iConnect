@@ -47,5 +47,20 @@
 
   p {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 425px) {
+    .inner {
+        flex-wrap: wrap;
+    }
+
+    .ftr {
+        flex-basis: 50%;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
   }
 </style>
