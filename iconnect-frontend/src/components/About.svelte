@@ -118,8 +118,8 @@
 
     .gradient {
       height: 2vh;
-      background:#45C5F7;
-;
+      background: linear-gradient(105.12deg, #8c1cff -11.69%, #6ee2f5 86.28%),
+        linear-gradient(0deg, #ffffff, #ffffff);
     }
   }
 </style>

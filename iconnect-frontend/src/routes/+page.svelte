@@ -5,6 +5,7 @@
   import HeroText from "../components/LandingPageAssests/HeroText.svelte";
   import Spacer from "../components/LandingPageAssests/Spacer.svelte";
   import About from "../components/About.svelte";
+  import Info from "../components/Info.svelte";
 </script>
 
 <Spacer />
@@ -14,6 +15,7 @@
   <SpinningCard />
   <Wave />
 </section>
+<Info />
 <About />
 
 <style>
