@@ -1,5 +1,5 @@
 <ul class="container1">
-  <li class="p">ICONNECT</li>
+  <li class="p">ICONNECT,</li>
   <li class="p2">CONNECT EASIER.</li>
 </ul>
 
@@ -39,16 +39,16 @@
     color: rgba(110, 226, 245, 1);
   }
 
-  @media (max-width: 768px) {
+  @media (width <=800px) {
     .container1 {
-      grid-area: 50/4/19/27;
-      margin: 7.5% 0;
-      padding: 0%;
-      z-index: 1;
-      /* z-index: 10; */
+      grid-area: 40/1/19/27;
+      margin: 7.5%;
+      padding: 1%;
+      z-index: 10;
     }
-    li {
-      font-size: 5vw;
+    .p,
+    .p2 {
+      font-size: 3rem;
     }
   }
 </style>

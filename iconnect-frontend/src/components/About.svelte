@@ -53,6 +53,7 @@
   .container {
     display: flex;
     width: 40vw;
+    margin-top: 1%;
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -98,11 +99,12 @@
       flex-direction: column;
       justify-content: center;
       padding: 0%;
+      width: 100vw;
     }
 
     .container,
     .statue {
-      width: 100%;
+      width: 100vw;
     }
 
     .aboutus {
