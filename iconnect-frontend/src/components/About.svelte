@@ -5,20 +5,33 @@
     <h1 class="aboutus">ABOUT US</h1>
     <ul class="p4">
       <li>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatem
-        ad facere et, provident vel rerum fugiat quo iusto laborum culpa facilis
-        fuga tempore adipisci voluptas, architecto ipsam velit. Omnis?
+        Welcome to iConnect, your gateway to seamless business interactions!
+        Established with a fresh perspective in [Year Founded], we're dedicated
+        to empowering businesses of all sizes with innovative NFC card
+        solutions. At iConnect, we recognize the pivotal role that technology
+        plays in modern business endeavors. Our NFC cards redefine customer
+        engagement by effortlessly merging the digital and physical worlds.
+        Whether you're looking to enhance your advertising strategies, leave a
+        lasting impression with your business card, or amplify your online
+        presence with authentic Google reviews, iConnect's NFC cards are the
+        answer.
       </li>
       <li>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet amet
-        dolor ab placeat facere quos modi in necessitatibus officia libero
-        commodi natus, praesentium corporis totam perferendis quasi laboriosam
-        veniam velit?
+        Our mission revolves around enabling businesses to effortlessly connect
+        with their audience and unlock new dimensions of growth. We're not just
+        about cards we're about creating meaningful connections that foster
+        loyalty and success.
       </li>
       <li>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laborum
-        illum assumenda deleniti sed qui dolore commodi ad cumque corporis,
-        repellat, quos asperiores ullam provident quae voluptatem, iste ea quo.
+        With a keen focus on simplicity and efficiency, we've designed our NFC
+        cards to be a game-changer for businesses across industries. From local
+        startups to established enterprises, iConnect is your partner in taking
+        your business to the next level.
+      </li>
+      <li class="last">
+        Join us in embracing the future of business interaction. Elevate your
+        advertising, networking, and customer feedback with iConnect NFC cards.
+        Your success story starts here.
       </li>
     </ul>
   </div>
@@ -61,7 +74,7 @@
   .aboutus {
     font-family: "Cabin Condensed";
     font-weight: 700;
-    font-size: 3vw;
+    font-size: 3rem;
     letter-spacing: 10px;
     color: #444444;
   }
@@ -69,7 +82,7 @@
   .p4 {
     font-family: "Cabin Condensed";
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 2rem;
     letter-spacing: normal;
     color: #444444;
     list-style: none;
@@ -93,6 +106,10 @@
     background-image: url(/svgs/statuebg.svg);
     z-index: 1;
     overflow-x: hidden;
+  }
+
+  .last {
+    font-size: 2.25rem;
   }
   @media (max-width: 600px) {
     .about {
