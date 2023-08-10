@@ -151,7 +151,7 @@
     flex-direction: column;
     padding: 10px;
     align-items: center;
-    z-index: 5;
+    /* z-index: 5;s */
   }
 
   .active-dropdown .dropdown-item {

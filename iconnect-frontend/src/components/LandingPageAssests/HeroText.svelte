@@ -44,7 +44,8 @@
       grid-area: 50/4/19/27;
       margin: 7.5% 0;
       padding: 0%;
-      z-index: 10;
+      z-index: 1;
+      /* z-index: 10; */
     }
     li {
       font-size: 5vw;
