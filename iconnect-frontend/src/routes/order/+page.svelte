@@ -96,7 +96,7 @@
 
   .product-img-holder {
     display: flex;
-    align-items: end;
+    /* align-items: end; */
     flex-direction: column;
     margin-right: 2%;
     /* flex: 4; */
@@ -104,13 +104,15 @@
   }
 
   .img-containment {
-    width: 70%;
+    width: 100%;
     /* overflow: hidden; */
   }
 
   .product-img {
     width: 100%;
-    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* object-fit: cover; */
   }
 
   .email,

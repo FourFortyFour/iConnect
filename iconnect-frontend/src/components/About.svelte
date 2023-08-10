@@ -45,8 +45,7 @@
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    height: 130vh;
-    padding: 0 0 0 40px;
+    padding: 0 0 96px 40px;
     z-index: 3;
     justify-content: space-between;
   }
