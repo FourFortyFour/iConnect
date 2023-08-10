@@ -6,6 +6,7 @@
   import Spacer from "../components/LandingPageAssests/Spacer.svelte";
   import About from "../components/About.svelte";
   import Info from "../components/Info.svelte";
+  import Features from "../components/Features.svelte";
 </script>
 
 <Spacer />
@@ -15,6 +16,7 @@
   <SpinningCard />
   <Wave />
 </section>
+<Features />
 <Info />
 <About />
 
