@@ -1,5 +1,5 @@
 from firebase_functions import https_fn
-from firebase_admin import initialize_app, firestore
+from firebase_admin import initialize_app, firestore, credentials
 from flask import Flask, request, Response
 import stripe
 import re
@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
-fire_app = initialize_app()
+cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
+fire_app = initialize_app(credential=cred)
 db = firestore.client()
 stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
 app = Flask("internal")

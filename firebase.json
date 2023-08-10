@@ -24,6 +24,12 @@
       "minInstances": 1
     }
   },
+  "rewrites": [
+    {
+      "source": "**",
+      "function": "webhook_runner"
+    }
+  ],
   "emulators": {
     "functions": {
       "port": 5001
@@ -35,9 +41,6 @@
       "enabled": true
     },
     "singleProjectMode": true,
-    "auth": {
-      "port": 9099
-    },
     "firestore": {
       "port": 8080,
       "rules": "firestore.rules"

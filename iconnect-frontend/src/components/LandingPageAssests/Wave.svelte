@@ -44,11 +44,14 @@
   }
   @media (max-width: 768px) {
     .wave svg {
-      height: 30vh;
+      height: 55vh;
       width: 100vw;
     }
     .wave {
       width: 100vw;
+      display: none;
+      bottom: 15vh;
+      /* z-index: -2; */
     }
   }
 
