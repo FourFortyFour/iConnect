@@ -5,26 +5,28 @@
       <a href="/order" class="get_button">Get Yours Today</a>
     </div>
     <div class="txt_part">
-        <div class="alone top"></div>
-        <div class="mid">
-            <div class="left"></div>
-            <p>
-                Google Review NFC Cards 
-            Unlock the power of instant feedback! Tap and review made easy. Purchase our NFC cards and make it effortless for your customers to leave a Google review. Quick, convenient, and hassle-free. Elevate your business reputation today!
-            </p>
-            <div class="right"></div>
-        </div>
-        <div class="alone btm"></div>
+      <div class="alone top" />
+      <div class="mid">
+        <div class="left" />
+        <p>
+          Google Review NFC Cards Unlock the power of instant feedback! Tap and
+          review made easy. Purchase our NFC cards and make it effortless for
+          your customers to leave a Google review. Quick, convenient, and
+          hassle-free. Elevate your business reputation today!
+        </p>
+        <div class="right" />
+      </div>
+      <div class="alone btm" />
     </div>
   </section>
 </section>
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
 
-    * {
+  * {
     font-family: "Cabin Condensed", sans-serif;
-    }
+  }
   .outer {
     padding: 4%;
     background-color: white;
@@ -69,32 +71,30 @@
   }
 
   .top {
-    background: #DA4638;
+    background: #da4638;
   }
 
   .btm {
-    background: #5577AA;
-
+    background: #5577aa;
   }
 
   .mid {
     display: flex;
-
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 0.75vw;
-    background-color: #DA4638;
+    background-color: #da4638;
     margin: 3% 0%;
   }
 
   .left {
-    background: #369F52;
+    background: #369f52;
   }
 
   .right {
-    background: #EEB61D;
-
+    background: #eeb61d;
   }
 
   p {
@@ -106,45 +106,45 @@
 
   @media (min-width: 769px) and (max-width: 1024px) {
     p {
-        font-size: 1.75rem;
+      font-size: 1.75rem;
     }
 
     img {
-        width: 20vw;
+      width: 20vw;
     }
 
     a {
-        border-width: 4px;
-        padding: 4% 6%;
+      border-width: 4px;
+      padding: 4% 6%;
     }
-
   }
 
   @media (max-width: 768px) {
     .inner {
-        flex-direction: column;
-        padding: 4%;
+      flex-direction: column;
+      padding: 4%;
     }
 
     p {
-        font-size: 1rem;
+      font-size: 1rem;
     }
 
     .img_part {
-        margin-bottom: 2vh;
+      margin-bottom: 2vh;
     }
 
-    .left, .right {
-        display: none;
+    .left,
+    .right {
+      display: none;
     }
 
     img {
-        width: 50%;
+      width: 50%;
     }
 
     a {
-        padding: 2% 2%;
-        border: none;
+      padding: 2% 2%;
+      border: none;
     }
   }
 </style>

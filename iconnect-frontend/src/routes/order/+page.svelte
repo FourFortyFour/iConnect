@@ -1,11 +1,8 @@
 <script>
   import { enhance } from "$app/forms";
-  import { writable } from 'svelte/store';
-  import { tweened } from "svelte/motion";
-  import { spring } from "svelte/motion";
-
+  import { writable } from "svelte/store";
   import NumberSelect from "../../components/NumberSelect.svelte";
-  
+
   export let data;
   const priceVal = writable(data.product.price);
 </script>
@@ -16,13 +13,13 @@
   <main class="content-holder">
     <div class="product-img-holder">
       <div class="img-containment">
-        <img class="product-img" src="/imgs/nfc_card_og.jpg" alt="" />
+        <img class="product-img" src="/imgs/google_rev.png" alt="" />
       </div>
     </div>
     <form action="?/pay" method="post" use:enhance>
       <h1 style="margin-bottom: 1vh;">{data.product.name}</h1>
       <div class="price-select">
-        <NumberSelect name="quantity" price={priceVal}/>
+        <NumberSelect name="quantity" price={priceVal} />
         <h2 class="price">AED {$priceVal}</h2>
       </div>
       <h3>Description</h3>
@@ -148,7 +145,6 @@
     background-color: #444444;
   }
   @media (max-width: 768px) {
-
     .img-containment {
       width: 100%;
       margin-bottom: 4%;
@@ -170,6 +166,5 @@
     aside {
       flex: 0.5;
     }
-
   }
 </style>

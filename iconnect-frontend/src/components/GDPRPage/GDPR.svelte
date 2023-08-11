@@ -1,5 +1,5 @@
 <script>
-  let currentDate = new Date().toLocaleDateString("en-US");
+  // let currentDate = new Date().toLocaleDateString("en-US");
 
   let contactInfo = {
     email: "contact@example.com",
@@ -154,7 +154,7 @@
   <h2>Contact us:</h2>
   <p>
     For questions, concerns, or requests related to our privacy policy or data
-    processing practices, users can reach us through {contactInformation}.
+    processing practices, users can reach us through {contactInfo}.
   </p>
 </section>
 

@@ -83,7 +83,8 @@
       gap: 0.5rem;
     }
 
-    .foot_t, .foot_con {
+    .foot_t,
+    .foot_con {
       display: none;
     }
 

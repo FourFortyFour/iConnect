@@ -21,7 +21,6 @@
           value--;
           price.set($price - baseVal);
         }
-        
       }}
     >
       chevron_left
