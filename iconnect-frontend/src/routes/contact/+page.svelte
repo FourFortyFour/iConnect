@@ -145,9 +145,6 @@
     .contact_content {
       width: 90%;
     }
-    .contact-header {
-      margin-top: 5rem;
-    }
 
     .btn_row {
       align-items: center;
@@ -160,6 +157,7 @@
 
     button {
       padding: 3.5% 8%;
+      margin-bottom: 2%;
     }
   }
 </style>
