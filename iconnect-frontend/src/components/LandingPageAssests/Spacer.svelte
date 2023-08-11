@@ -174,9 +174,9 @@
     .spacer {
       height: 100vh;
       width: 100vw;
+      scale: 3;
       position: fixed;
       top: 0;
-      background-repeat: repeat-x;
       background-size: cover;
       z-index: -4;
     }

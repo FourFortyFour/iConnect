@@ -1,6 +1,18 @@
 <script>
   import { fly } from "svelte/transition";
+  import { onMount } from "svelte";
+
   let open = false;
+
+  let closeDropdown = () => {
+    open = false;
+  };
+  onMount(() => {
+    window.addEventListener("click", closeDropdown);
+    return () => {
+      window.removeEventListener("click", closeDropdown);
+    };
+  });
 </script>
 
 <link
@@ -24,7 +36,13 @@
     </ul>
   </nav>
   <dt />
-  <button class="phone-dropdown" on:click={() => (open = !open)}>
+  <button
+    class="phone-dropdown"
+    on:click={(event) => {
+      open = !open;
+      event.stopPropagation();
+    }}
+  >
     <div />
     <div />
     <div />
@@ -34,6 +52,7 @@
   <div
     class="active-dropdown"
     transition:fly|global={{ y: -100, duration: 1000 }}
+    on:click={(event) => event.stopPropagation()}
   >
     <a class="dropdown-item" href="/contact">CONTACT</a>
     <a class="dropdown-item" href="/order">GET YOUR OWN</a>
@@ -179,6 +198,7 @@
       padding: 3.5%;
       background-color: #444444;
       width: 100vw;
+      /* height: 7vh; */
     }
 
     .logo {
