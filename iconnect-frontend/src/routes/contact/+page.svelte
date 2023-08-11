@@ -86,6 +86,7 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
+    width: 65%;
   }
 
 
@@ -97,9 +98,9 @@
     justify-content: center;
   }
 
-  .contactimg {
+  /* .contactimg {
     width: 5vw;
-  }
+  } */
 
   label {
     /* width: 60vw; */
@@ -140,8 +141,25 @@
   }
 
   @media (max-width: 768px) {
+
+    .contact_content {
+      width: 90%;
+    }
     .contact-header {
       margin-top: 5rem;
+    }
+
+    .btn_row {
+      align-items: center;
+    }
+
+    form {
+      padding: 1%;
+      width: 85%;
+    }
+
+    button {
+      padding: 3.5% 8%;
     }
   }
 </style>
