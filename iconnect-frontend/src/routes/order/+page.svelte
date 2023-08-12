@@ -39,7 +39,6 @@
       />
       <input
         class="URL"
-        type="url"
         name="companyURL"
         placeholder="https://www.yourcompany.com or just your company's name"
         required
