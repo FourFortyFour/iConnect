@@ -31,10 +31,12 @@ def extract_data(data: dict) -> dict:
             for key, source in order_data_keymap.items()
             if key in source
         }
+
         checkout_session = stripe.checkout.Session.list(
             payment_intent=data.get("object").get("payment_intent")
         )
         order_data["phone"] = checkout_session["data"][0]["customer_details"]["phone"]
+
         if all(order_data.values()):
             return order_data
     except Exception as e:

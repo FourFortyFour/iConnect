@@ -22,28 +22,13 @@
     "frameworksBackend": {
       "region": "europe-west1",
       "minInstances": 1
-    }
-  },
-  "rewrites": [
-    {
-      "source": "**",
-      "function": "webhook_runner"
-    }
-  ],
-  "emulators": {
-    "functions": {
-      "port": 5001
     },
-    "hosting": {
-      "port": 5000
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true,
-    "firestore": {
-      "port": 8080,
-      "rules": "firestore.rules"
-    }
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "paymentwebhook",
+        "region": "europe-west1"
+      }
+    ]
   }
 }

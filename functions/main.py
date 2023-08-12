@@ -1,7 +1,8 @@
 from flask import Flask, request, Response
-from firebase_functions import https_fn
+from firebase_functions import https_fn, options
 from utils import initialized_stripe as stripe, webhook_sk
 import event_handler
+
 
 app = Flask("internal")
 
@@ -33,7 +34,9 @@ def payment_webhook() -> Response:
             status=400, response="Event construction failed, invalid payload"
         )
     elif isinstance(event, stripe.Event) and event.type == "payment_intent.succeeded":
-        event_handler.proc_payment(event.data)
+        event_handler.proc_payment(
+            event.data
+        ) if app.debug else event_handler.proc_payment(event.data, live=True)
         return Response(status=200, response="payment successful")
     elif isinstance(event, stripe.Event) and event.type == "payment_intent.created":
         return Response(status=200, response="payment intent started")
@@ -49,4 +52,4 @@ def webhook_runner(req: https_fn.Request) -> https_fn.Response:
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=8080)

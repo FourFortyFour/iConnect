@@ -33,7 +33,7 @@ CLIENT_EMAIL_TEMPLATE = {
 }
 
 INTERNAL_EMAIL_TEMPLATE = {
-    "to": [],
+    "to": "",
     "message": {
         "subject": "New Order Alert!",
         "html": """
@@ -59,7 +59,7 @@ INTERNAL_EMAIL_TEMPLATE = {
 
 def initialize_firebase():
     cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
-    initialize_app(credential=cred)
+    initialize_app()
     return firestore.client()
 
 
