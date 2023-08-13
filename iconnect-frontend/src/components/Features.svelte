@@ -51,6 +51,9 @@
   }
 
   @media (max-width: 425px) {
+    .outer {
+        padding: 4% 4%;
+    }
     .inner {
       flex-wrap: wrap;
     }

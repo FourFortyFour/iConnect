@@ -8,9 +8,14 @@
         Welcome to iConnect, your gateway to seamless business interactions!
         Established with a fresh perspective in [Year Founded], we're dedicated
         to empowering businesses of all sizes with innovative NFC card
-        solutions. At iConnect, we recognize the pivotal role that technology
+        solutions. 
+      </li>
+      <li>
+        At iConnect, we recognize the pivotal role that technology
         plays in modern business endeavors. Our NFC cards redefine customer
         engagement by effortlessly merging the digital and physical worlds.
+      </li>
+      <li>
         Whether you're looking to enhance your advertising strategies, leave a
         lasting impression with your business card, or amplify your online
         presence with authentic Google reviews, iConnect's NFC cards are the
@@ -117,26 +122,36 @@
       justify-content: center;
       padding: 0%;
       width: 100vw;
+      background-image: url(/svgs/statuebg.svg);
+  
     }
 
     .container,
     .statue {
       width: 100vw;
+      background-image: none;
     }
 
     .aboutus {
       font-size: 5vw;
       text-align: center;
+      
     }
     .p4 {
       font-size: 4vw;
       padding: 4%;
+      text-align: center;
+      
     }
 
     .gradient {
       height: 2vh;
       background: linear-gradient(105.12deg, #8c1cff -11.69%, #6ee2f5 86.28%),
         linear-gradient(0deg, #ffffff, #ffffff);
+    }
+
+    .last {
+      font-size: 1.25rem;
     }
   }
 </style>

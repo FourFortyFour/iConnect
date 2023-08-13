@@ -45,7 +45,7 @@
       grid-area: 40/1/19/27;
       margin: 7.5%;
       padding: 1%;
-      z-index: 10;
+      z-index: 1;
     }
     .p,
     .p2 {
