@@ -6,4 +6,7 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 	],
+	build: {
+		outDir: '../public',
+	}
 });
