@@ -4,7 +4,7 @@ from utils import initialized_stripe as stripe, webhook_sk
 import event_handler
 
 
-app = Flask("internal")
+app = Flask(__name__)
 
 
 def make_event(req_data: str, sign_header: str, webhook_sk: str) -> stripe.Event:
@@ -19,7 +19,7 @@ def make_event(req_data: str, sign_header: str, webhook_sk: str) -> stripe.Event
 
 
 @app.route("/payment_done", methods=["POST"])
-def payment_webhook() -> Response:
+def event_receiver() -> Response:
     req_data = request.get_data(as_text=True)
     event = request.get_json()
     sign_header = request.headers.get("stripe-signature")
@@ -46,10 +46,10 @@ def payment_webhook() -> Response:
 
 # Exposing the flask app
 @https_fn.on_request()
-def webhook_runner(req: https_fn.Request) -> https_fn.Response:
+def paymentwebhook(req: https_fn.Request) -> https_fn.Response:
     with app.request_context(req.environ):
         return app.full_dispatch_request()
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0")

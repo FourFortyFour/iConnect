@@ -26,8 +26,9 @@
     "rewrites": [
       {
         "source": "**",
-        "function": "paymentwebhook",
-        "region": "europe-west1"
+        "run": {
+          "serviceId": "paymentwebhook"
+        }
       }
     ]
   }

@@ -58,7 +58,7 @@ INTERNAL_EMAIL_TEMPLATE = {
 
 
 def initialize_firebase():
-    cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
+    # cred = credentials.Certificate(os.environ.get("FIREBASE_ADMIN_CRED"))
     initialize_app()
     return firestore.client()
 
