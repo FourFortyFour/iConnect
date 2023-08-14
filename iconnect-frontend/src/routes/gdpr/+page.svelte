@@ -7,6 +7,10 @@
   };
 </script>
 
+<svelte:head>
+    <title>iConnect - Privacy</title>
+</svelte:head>
+
 <main class="content">
 <h1>Your Privacy Matters To Us!</h1>
 <div class="divider">

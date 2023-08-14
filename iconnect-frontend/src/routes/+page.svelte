@@ -9,6 +9,11 @@
   import Features from "../components/Features.svelte";
 </script>
 
+<svelte:head>
+  <title>iConnect - Connect Easier with NFC cards</title>
+</svelte:head>
+
+
 <Spacer />
 <section class="home">
   <HeroText />

@@ -2,6 +2,10 @@
   import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
 </script>
 
+<svelte:head>
+  <title>iConnect - Contact Us</title>
+</svelte:head>
+
 <main>
   <Spacer />
   <div class="contact_content">

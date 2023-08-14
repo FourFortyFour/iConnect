@@ -9,6 +9,10 @@
   const priceVal = writable(data.product.price);
 </script>
 
+<svelte:head>
+  <title>iConnect - Buy Now </title>
+</svelte:head>
+
 <div class="page">
   <!-- <Spacer /> -->
   <aside />
