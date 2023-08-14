@@ -12,4 +12,14 @@
   * {
     font-family: 'Cabin Condensed', sans-serif;
   }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+
 </style>
