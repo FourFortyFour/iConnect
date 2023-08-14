@@ -2,7 +2,7 @@
   <li class="foot_t">2023 iConnect. All rights reserved</li>
   <img
     class="foot_logo"
-    src="/logos/logo-no-background.png"
+    src="/logos/logo-no-background.webp"
     alt="company logo"
     draggable="false"
   />

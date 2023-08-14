@@ -19,7 +19,7 @@
   <main class="content-holder">
     <div class="product-img-holder">
       <div class="img-containment">
-        <img class="product-img" src="/imgs/google_rev.png" alt="" />
+        <img class="product-img" src="/imgs/google_rev.webp" alt="" />
       </div>
     </div>
     <form action="?/pay" method="post" use:enhance>

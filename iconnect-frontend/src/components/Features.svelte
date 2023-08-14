@@ -1,19 +1,19 @@
 <section class="outer">
   <div class="inner">
     <div class="ftr">
-      <img src="/imgs/trophy.jpeg" alt="trophy" />
+      <img src="/imgs/trophy.webp" alt="trophy" />
       <p>Be Number One</p>
     </div>
     <div class="ftr">
-      <img src="/imgs/race.jpeg" alt="2 people racing" />
+      <img src="/imgs/race.webp" alt="2 people racing" />
       <p>Get Fast Reviews</p>
     </div>
     <div class="ftr">
-      <img src="/imgs/rocket.jpeg" alt="rocket" />
+      <img src="/imgs/rocket.webp" alt="rocket" />
       <p>Boost your Engagement</p>
     </div>
     <div class="ftr">
-      <img src="/imgs/groupy.jpeg" alt="a group of people" />
+      <img src="/imgs/groupy.webp" alt="a group of people" />
       <p>Convenient to Customers</p>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <section class="outer">
   <section class="inner">
     <div class="img_part">
-      <img src="/imgs/google_rev.png" alt="logo of google with 5 starts" />
+      <img src="/imgs/google_rev.webp" alt="logo of google with 5 starts" />
       <a href="/order" class="get_button">Get Yours Today</a>
     </div>
     <div class="txt_part">
