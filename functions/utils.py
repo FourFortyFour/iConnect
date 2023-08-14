@@ -68,7 +68,7 @@ def initialize_stripe():
     return stripe
 
 
-webhook_sk = os.environ.get("STRIPE_WEBHOOK_KEY_E")
+webhook_sk = os.environ.get("STRIPE_LIVEWEBHOOK_KEY")
 db = initialize_firebase()
 initialized_stripe = initialize_stripe()
 

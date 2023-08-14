@@ -69,7 +69,7 @@ def proc_payment(data: dict, live: bool = False) -> None:
     if live:
         print(f"Sending confirmation mail to {client_email['to']}")
         add_doc("icon_mail", client_email)
+        add_doc("orders", order_data)
         for r in internal_recipients:
             internal_email["to"] = r
             add_doc("icon_mail", internal_email)
-        add_doc("orders", order_data)
