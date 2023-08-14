@@ -12,8 +12,8 @@
     }
   ],
   "hosting": {
-    "site": "iconnectae",
     "source": "iconnect-frontend",
+    "site": "iconnectae",
     "ignore": [
       "firebase.json",
       "**/.*",

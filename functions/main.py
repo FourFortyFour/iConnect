@@ -7,6 +7,9 @@ import event_handler
 app = Flask(__name__)
 
 
+stripe.api_version = "2022-11-15"
+
+
 def make_event(req_data: str, sign_header: str, webhook_sk: str) -> stripe.Event:
     try:
         return stripe.Webhook.construct_event(req_data, sign_header, webhook_sk)
@@ -18,7 +21,7 @@ def make_event(req_data: str, sign_header: str, webhook_sk: str) -> stripe.Event
         return None
 
 
-@app.route("/payment_done", methods=["POST"])
+@app.route("/paymentwebhook", methods=["POST"])
 def event_receiver() -> Response:
     req_data = request.get_data(as_text=True)
     event = request.get_json()
@@ -34,9 +37,10 @@ def event_receiver() -> Response:
             status=400, response="Event construction failed, invalid payload"
         )
     elif isinstance(event, stripe.Event) and event.type == "payment_intent.succeeded":
-        event_handler.proc_payment(
-            event.data
-        ) if app.debug else event_handler.proc_payment(event.data, live=True)
+        # event_handler.proc_payment(
+        #     event.data, live=True
+        # ) if app.debug else event_handler.proc_payment(event.data, live=True)
+        event_handler.proc_payment(event.data, live=True)
         return Response(status=200, response="payment successful")
     elif isinstance(event, stripe.Event) and event.type == "payment_intent.created":
         return Response(status=200, response="payment intent started")
@@ -45,11 +49,16 @@ def event_receiver() -> Response:
 
 
 # Exposing the flask app
-@https_fn.on_request()
+@https_fn.on_request(
+    cors=options.CorsOptions(cors_origins="*", cors_methods=["get", "post"]),
+    region="europe-west1",
+)
 def paymentwebhook(req: https_fn.Request) -> https_fn.Response:
     with app.request_context(req.environ):
         return app.full_dispatch_request()
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(
+        host="0.0.0.0",
+    )
