@@ -48,7 +48,7 @@
     />
   </div> -->
   <!-- <div class="statue"> -->
-  <img class="statue" src="/imgs/card_statue.png" alt="" />
+  <img class="statue" src="/imgs/card_statue.webp" alt="" />
   <!-- </div> -->
 </section>
 
