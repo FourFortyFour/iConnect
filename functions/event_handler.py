@@ -19,6 +19,7 @@ def extract_data(data: dict) -> dict:
         order_data_keymap = {
             "name": customer_shipping_details,
             "user_email": metadata,
+            "company_name_url": metadata,
             "product_quantity": metadata,
             "state": address,
             "country": address,
@@ -46,9 +47,6 @@ def extract_data(data: dict) -> dict:
 
 
 def proc_payment(data: dict, live: bool = False) -> None:
-    # make a new order doc in firestore, will have to extract data
-    # email the user, will have to collect info here
-    # print(f"Processing payment for {data}")
     order_data = extract_data(data)
     print(f"Extracted data: {order_data}")
     if order_data is None:
@@ -64,7 +62,11 @@ def proc_payment(data: dict, live: bool = False) -> None:
     internal_email["message"]["html"] = internal_email["message"]["html"].format(
         **order_data
     )
-    internal_recipients = ["iconnect@pathfinder.ink", "eaaa1875@gmail.com"]
+    internal_recipients = [
+        "iconnect@pathfinder.ink",
+        "eaaa1875@gmail.com",
+        "suhaib.athar@gmail.com",
+    ]
 
     if live:
         print(f"Sending confirmation mail to {client_email['to']}")

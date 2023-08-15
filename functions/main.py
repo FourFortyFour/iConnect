@@ -48,12 +48,15 @@ def event_receiver() -> Response:
     return Response(status=200, response="Event processed")
 
 
-# Exposing the flask app
+# Exposing the flask app to accept http requests from stripe webhook
+# i.e. payment_intent events
 @https_fn.on_request(
     cors=options.CorsOptions(cors_origins="*", cors_methods=["get", "post"]),
     region="europe-west1",
 )
 def paymentwebhook(req: https_fn.Request) -> https_fn.Response:
+    # https://cloud.google.com/functions/docs/concepts/execution-environment?hl=en#functions-concepts-scopes-python
+    # Potential future optimization: "A single function invocation results in execution of only the body of the function declared as the entry point"
     with app.request_context(req.environ):
         return app.full_dispatch_request()
 
