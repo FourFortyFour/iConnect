@@ -81,7 +81,8 @@
       display: contents;
     }
     footer {
-      position: relative;
+      position: absolute;
+      bottom: 0;
       flex-direction: column;
       justify-content: center;
       align-items: center;
