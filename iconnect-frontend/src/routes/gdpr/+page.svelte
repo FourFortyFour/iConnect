@@ -166,7 +166,7 @@
     <h2>Contact us:</h2>
     <p>
       For questions, concerns, or requests related to our privacy policy or data
-      processing practices, users can reach us through {contactInfo}.
+      processing practices, users can reach us through <a href="/contact">this link</a> .
     </p>
   </section>
 
