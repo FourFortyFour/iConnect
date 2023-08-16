@@ -7,16 +7,16 @@
     draggable="false"
   />
   <a class="small-only" href="/gdpr">Privacy Policy</a>
+  <a class="small-only" href="/tos">Terms Of Service</a>
   <ul class="foot_con">
-    <li class="foot_t2">TERMS OF USE</li>
+    <li class="foot_t2"><a href="/tos">TERMS OF SERVICE</a></li>
     <li class="foot_t3"><a href="/gdpr">PRIVACY POLICY</a></li>
   </ul>
 </footer>
 
 <style>
-
   * {
-    font-family: 'Cabin Condensed', sans-serif;
+    font-family: "Cabin Condensed", sans-serif;
   }
   a {
     text-decoration: none;
@@ -77,7 +77,6 @@
   }
 
   @media (max-width: 768px) {
-
     .small-only {
       display: contents;
     }

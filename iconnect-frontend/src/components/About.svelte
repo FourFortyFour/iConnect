@@ -6,14 +6,13 @@
     <ul class="p4">
       <li>
         Welcome to iConnect, your gateway to seamless business interactions!
-        Established with a fresh perspective in [Year Founded], we're dedicated
-        to empowering businesses of all sizes with innovative NFC card
-        solutions. 
+        Established with a fresh perspective in 2023, we're dedicated to
+        empowering businesses of all sizes with innovative NFC card solutions.
       </li>
       <li>
-        At iConnect, we recognize the pivotal role that technology
-        plays in modern business endeavors. Our NFC cards redefine customer
-        engagement by effortlessly merging the digital and physical worlds.
+        At iConnect, we recognize the pivotal role that technology plays in
+        modern business endeavors. Our NFC cards redefine customer engagement by
+        effortlessly merging the digital and physical worlds.
       </li>
       <li>
         Whether you're looking to enhance your advertising strategies, leave a
@@ -123,7 +122,6 @@
       padding: 0%;
       width: 100vw;
       background-image: url(/svgs/statuebg.svg);
-  
     }
 
     .container,
@@ -135,13 +133,11 @@
     .aboutus {
       font-size: 5vw;
       text-align: center;
-      
     }
     .p4 {
       font-size: 4vw;
       padding: 4%;
       text-align: center;
-      
     }
 
     .gradient {

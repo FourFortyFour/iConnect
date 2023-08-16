@@ -1,20 +1,19 @@
 <script>
   import { enhance } from "$app/forms";
   import { writable } from "svelte/store";
-  // import { tweened } from "svelte/motion";
-  // import { spring } from "svelte/motion";
   import NumberSelect from "../../components/NumberSelect.svelte";
+  import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
 
   export let data;
   const priceVal = writable(data.product.price);
 </script>
 
 <svelte:head>
-  <title>iConnect - Buy Now </title>
+  <title>iConnect - Buy Now</title>
 </svelte:head>
 
 <div class="page">
-  <!-- <Spacer /> -->
+  <Spacer />
   <aside />
   <main class="content-holder">
     <div class="product-img-holder">
@@ -151,7 +150,7 @@
   }
   @media (max-width: 768px) {
     .img-containment {
-      width: 100%;
+      width: 88%;
       margin-bottom: 4%;
     }
 
