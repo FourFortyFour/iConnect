@@ -9,11 +9,11 @@
   const priceVal = writable(data.product.price);
 
   const urls = [
-    "/imgs/google_rev.webp",
-    "/imgs/product_1.webp",
-    "/imgs/product_2.webp",
-    "/imgs/product_3.webp"
-  ]
+    {url: "/imgs/google_rev.webp", alt: "google review card"},
+    {url: "/imgs/product_1.webp", alt: "person holding up google review card"},
+    {url: "/imgs/product_2.webp", alt: "person holding up google review card"},
+    {url: "/imgs/product_3.webp", alt: "person holding up google review card"},
+]
 
 </script>
 

@@ -53,7 +53,7 @@
     <div class="main-img">
       <img
         class="central-img"
-        src={current[main_ix]}
+        src={current[main_ix].url}
         out:fade={{ duration: 300 }}
         alt=""
       />
@@ -67,8 +67,8 @@
           {#if main_ix === i}
             <div class="reel-item selected">
               <img
-                src={url}
-                alt=""
+                src={url.url}
+                alt={url.alt}
                 class="reel-img"
                 on:click={() => (main_ix = i)}
               />
@@ -76,8 +76,8 @@
           {:else}
             <div class="reel-item">
               <img
-                src={url}
-                alt=""
+                src={url.url}
+                alt={url.alt}
                 class="reel-img"
                 on:click={() => (main_ix = i)}
               />
