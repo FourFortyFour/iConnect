@@ -161,6 +161,7 @@
     .content-holder {
       flex-direction: column;
       margin-top: 4vh;
+      margin-bottom: 7vh;
     }
 
     h1 {

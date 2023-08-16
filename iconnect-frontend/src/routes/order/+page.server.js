@@ -21,6 +21,7 @@ export async function load({ params }) {
 const stripe = Stripe(STRIPE_LIVE_KEY);
 
 const baseUrl = import.meta.env.MODE === "development" ? "http://localhost:5173" : "https://iconnectae.web.app"
+// const baseUrl = "https://iconnectae.web.app"
 export const actions = {
   pay: async ({ request }) => {
     const data = await request.formData();
