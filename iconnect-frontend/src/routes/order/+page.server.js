@@ -2,7 +2,7 @@ import { db } from '../../lib/firebase.js';
 import { doc, getDoc } from "firebase/firestore";
 import { redirect } from "@sveltejs/kit";
 import { Stripe } from "stripe";
-import { STRIPE_SECRET_KEY } from "$env/static/private";
+import { STRIPE_LIVE_KEY } from "$env/static/private";
 
 export const prerender = false;
 export async function load({ params }) {
@@ -18,7 +18,7 @@ export async function load({ params }) {
 
 }
 
-const stripe = Stripe(STRIPE_SECRET_KEY);
+const stripe = Stripe(STRIPE_LIVE_KEY);
 
 const baseUrl = import.meta.env.MODE === "development" ? "http://localhost:5173" : "https://iconnectae.web.app"
 export const actions = {
@@ -26,6 +26,7 @@ export const actions = {
     const data = await request.formData();
     const email = data.get("email");
     const quantity = data.get("quantity");
+    const nameOrUrl = data.get("companyURL");
     const session = await stripe.checkout.sessions.create({
       line_items: [
         {
@@ -34,7 +35,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 40000,
+            unit_amount: 20000,
           },
           quantity: quantity,
         },
@@ -47,6 +48,7 @@ export const actions = {
       payment_intent_data: {
         metadata: {
           user_email: email,
+          company_name_url: nameOrUrl,
           product_quantity: quantity,
           product_name: "ic-card",
         },
