@@ -47,17 +47,17 @@
     <div />
     <div />
   </button>
+  {#if open}
+    <div
+      class="active-dropdown"
+      transition:fly|global={{ y: -100, duration: 1000 }}
+      on:click={(event) => event.stopPropagation()}
+    >
+      <a class="dropdown-item" href="/contact">CONTACT</a>
+      <a class="dropdown-item" href="/order">GET YOUR OWN</a>
+    </div>
+  {/if}
 </header>
-{#if open}
-  <div
-    class="active-dropdown"
-    transition:fly|global={{ y: -100, duration: 1000 }}
-    on:click={(event) => event.stopPropagation()}
-  >
-    <a class="dropdown-item" href="/contact">CONTACT</a>
-    <a class="dropdown-item" href="/order">GET YOUR OWN</a>
-  </div>
-{/if}
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap");
@@ -159,18 +159,19 @@
     background: #ffffff;
     border-radius: 10px;
     transition: all 0.3s linear;
-    position: relative;
+    /* position: relative; */
     transform-origin: 1px;
   }
   .active-dropdown {
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #444444;
     width: 100vw;
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
-    /* z-index: 5;s */
   }
 
   .active-dropdown .dropdown-item {

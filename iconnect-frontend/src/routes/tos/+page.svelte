@@ -3,4 +3,4 @@
 </script>
 
 <Spacer />
-<h1>Checkout Failed</h1>
+<h4>This page is under construction 😁</h4>

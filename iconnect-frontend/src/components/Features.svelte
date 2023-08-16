@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="ftr">
       <img src="/imgs/trophy.webp" alt="trophy" />
-      <p>Be Number One</p>
+      <p>Reach The Top</p>
     </div>
     <div class="ftr">
       <img src="/imgs/race.webp" alt="2 people racing" />
@@ -52,7 +52,7 @@
 
   @media (max-width: 425px) {
     .outer {
-        padding: 4% 4%;
+      padding: 4% 4%;
     }
     .inner {
       flex-wrap: wrap;
