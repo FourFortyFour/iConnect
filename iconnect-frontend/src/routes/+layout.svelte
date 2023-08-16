@@ -4,6 +4,10 @@
   // export const prerender = true;
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/x-icon" href="/logos/logo-black.ico">
+</svelte:head>
+
 <Nav />
 <slot />
 <Footer />
