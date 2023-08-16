@@ -3,9 +3,18 @@
   import { writable } from "svelte/store";
   import NumberSelect from "../../components/NumberSelect.svelte";
   import Spacer from "../../components/LandingPageAssests/Spacer.svelte";
+  import Slider from "../../components/Slider.svelte";
 
   export let data;
   const priceVal = writable(data.product.price);
+
+  const urls = [
+    "/imgs/google_rev.webp",
+    "/imgs/product_1.webp",
+    "/imgs/product_2.webp",
+    "/imgs/product_3.webp"
+  ]
+
 </script>
 
 <svelte:head>
@@ -13,12 +22,11 @@
 </svelte:head>
 
 <div class="page">
-  <Spacer />
   <aside />
   <main class="content-holder">
     <div class="product-img-holder">
       <div class="img-containment">
-        <img class="product-img" src="/imgs/google_rev.webp" alt="" />
+        <Slider urls={urls} />
       </div>
     </div>
     <form action="?/pay" method="post" use:enhance>
@@ -106,14 +114,9 @@
 
   .img-containment {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
     /* overflow: hidden; */
-  }
-
-  .product-img {
-    width: 100%;
-    border-radius: 25px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* object-fit: cover; */
   }
 
   .email,
@@ -156,12 +159,14 @@
 
     .product-img-holder {
       align-items: center;
+      width: 100%;
     }
 
     .content-holder {
       flex-direction: column;
       margin-top: 4vh;
       margin-bottom: 7vh;
+      padding-bottom: 7vh;
     }
 
     h1 {
