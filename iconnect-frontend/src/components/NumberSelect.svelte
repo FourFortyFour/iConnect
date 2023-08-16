@@ -12,14 +12,29 @@
 />
 
 <div class="number-selector">
-  <input {name} class="val" type="number" bind:value required min="1" />
+  <input
+    {name}
+    class="val"
+    type="number"
+    bind:value
+    on:change={() => {
+      if (value >= 1) {
+        price.set(baseVal * value);
+      } else {
+        value = 1;
+        price.set(baseVal * value);
+      }
+    }}
+    required
+    min="1"
+  />
   <div class="btns">
     <span
       class="icn material-symbols-outlined"
       on:click={() => {
         if (value !== 1) {
           value--;
-          price.set($price - baseVal);
+          price.set(baseVal * value);
         }
       }}
     >
@@ -29,7 +44,7 @@
       class="icn material-symbols-outlined"
       on:click={() => {
         value++;
-        price.set($price + baseVal);
+        price.set(baseVal * value);
       }}
     >
       chevron_right
