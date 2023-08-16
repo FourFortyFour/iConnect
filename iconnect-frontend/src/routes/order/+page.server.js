@@ -35,7 +35,7 @@ export const actions = {
             product_data: {
               name: "ic-card",
             },
-            unit_amount: 20000,
+            unit_amount: 40000,
           },
           quantity: quantity,
         },
