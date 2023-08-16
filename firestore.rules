@@ -13,7 +13,7 @@ service cloud.firestore {
     // all client requests to your Firestore database will be denied until you Update
     // your rules
     match /{document=**} {
-      allow read, write: if resource.data.visibility == 'public' || request.auth.uid == resource.data.owner;
+    allow read, write: if true;
     }
   }
 }
