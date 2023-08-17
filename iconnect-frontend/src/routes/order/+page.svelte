@@ -21,8 +21,9 @@
   <title>iConnect - Buy Now</title>
 </svelte:head>
 
+<Spacer />
 <div class="page">
-  <aside />
+  <!-- <aside /> -->
   <main class="content-holder">
     <div class="product-img-holder">
       <div class="img-containment">
@@ -60,7 +61,6 @@
       <div class="btn-holder"><button>Buy Now</button></div>
     </form>
   </main>
-  <aside />
 </div>
 
 <style>
@@ -72,20 +72,28 @@
   }
   .page {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
   }
   .content-holder {
     display: flex;
-    flex: 4;
-    align-items: start;
-    /* justify-content: center; */
+    /* flex: 4; */
+    align-self: start;;
+    justify-content: center;
     margin-top: 3%;
+    background-color: rgba(255,255,255, 0.8);
+    padding: 3%;
+    border-radius: 25px;
+    width: 55%;
   }
 
   form {
     display: flex;
     flex-direction: column;
     margin-left: 2%;
-    flex: 4;
+    width: 40%;
+    /* flex: 4; */
     /* align-items: center; */
   }
 
@@ -109,7 +117,7 @@
     flex-direction: column;
     margin-right: 2%;
     /* flex: 4; */
-    flex: 4;
+    /* flex: 4; */
   }
 
   .img-containment {
