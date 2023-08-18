@@ -54,7 +54,6 @@
       <img
         class="central-img"
         src={current[main_ix].url}
-        out:fade={{ duration: 300 }}
         alt=""
       />
     </div>
