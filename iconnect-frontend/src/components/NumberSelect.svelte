@@ -83,4 +83,20 @@
   .icn:hover {
     background-color: rgb(244, 244, 244);
   }
+  @media (max-width: 768px) {
+    .btns {
+      display: flex;
+      align-items: center;
+    }
+
+    .val {
+      width: 5vw;
+      height: 3vh;
+    }
+
+    .icn {
+      font-size: 16px;
+      margin: 0 5px;
+    }
+  }
 </style>
