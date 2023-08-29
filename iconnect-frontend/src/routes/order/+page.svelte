@@ -9,12 +9,20 @@
   const priceVal = writable(data.product.price);
 
   const urls = [
-    {url: "/imgs/google_rev.webp", alt: "google review card"},
-    {url: "/imgs/product_1.webp", alt: "person holding up google review card"},
-    {url: "/imgs/product_2.webp", alt: "person holding up google review card"},
-    {url: "/imgs/product_3.webp", alt: "person holding up google review card"},
-]
-
+    { url: "/imgs/google_rev.webp", alt: "google review card" },
+    {
+      url: "/imgs/product_1.webp",
+      alt: "person holding up google review card",
+    },
+    {
+      url: "/imgs/product_2.webp",
+      alt: "person holding up google review card",
+    },
+    {
+      url: "/imgs/product_3.webp",
+      alt: "person holding up google review card",
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -27,7 +35,7 @@
   <main class="content-holder">
     <div class="product-img-holder">
       <div class="img-containment">
-        <Slider urls={urls} />
+        <Slider {urls} />
       </div>
     </div>
     <form action="?/pay" method="post" use:enhance>
@@ -37,7 +45,7 @@
         <h2 class="price">AED {$priceVal}</h2>
       </div>
       <h3>Description</h3>
-      <p>{data.product.description}</p>
+      <p class="description">{data.product.description}</p>
       <h3>Features</h3>
       <ul class="features">
         {#each data.product.features as feature}
@@ -79,10 +87,10 @@
   .content-holder {
     display: flex;
     /* flex: 4; */
-    align-self: start;;
+    align-self: start;
     justify-content: center;
     margin-top: 3%;
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 3%;
     border-radius: 25px;
     width: 55%;
@@ -160,14 +168,28 @@
     background-color: #444444;
   }
   @media (max-width: 768px) {
+    .content-holder {
+      width: 65vw;
+    }
     .img-containment {
-      width: 88%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
       margin-bottom: 4%;
     }
 
     .product-img-holder {
       align-items: center;
       width: 100%;
+    }
+    .email,
+    .URL {
+      width: 40vw;
+    }
+
+    button {
+      width: 55vw;
     }
 
     .content-holder {
@@ -183,6 +205,9 @@
 
     aside {
       flex: 0.5;
+    }
+    .description {
+      width: 40vw;
     }
   }
 </style>

@@ -93,7 +93,6 @@
     width: 65%;
   }
 
-
   .contact-header {
     margin-top: 1em;
     display: flex;
@@ -145,7 +144,6 @@
   }
 
   @media (max-width: 768px) {
-
     .contact_content {
       width: 90%;
     }
