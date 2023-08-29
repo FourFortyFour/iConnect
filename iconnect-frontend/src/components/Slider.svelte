@@ -1,5 +1,4 @@
 <script>
-    import { fade } from "svelte/transition";
     // import { watchResize} from "svelte-watch-resize";
     export let urls;
   
