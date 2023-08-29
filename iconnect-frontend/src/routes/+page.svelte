@@ -7,10 +7,12 @@
   import About from "../components/About.svelte";
   import Info from "../components/Info.svelte";
   import Features from "../components/Features.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 <svelte:head>
   <title>iConnect - Connect Easier with NFC cards</title>
+  <meta name="description" "This is iConnect, a startup that's going to revolutionize the NFC card game. Purchase top of thel line google NFC cards.">
 </svelte:head>
 
 
