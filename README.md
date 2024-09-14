@@ -1,4 +1,4 @@
-## iConnect web page
+## iConnect
 ---
-#### Visit the [iConnect store page](https://iconnectae.web.app) to see the latest version of the app.
+#### The servers have been shutdown and this webapp is no longer functional, the code is kept for reference.
 ![IC-logo](/iconnect-frontend/static/logos/logo-color.png)
